@@ -1,8 +1,9 @@
 ---
 title: "初投稿です"
 date: 2017-08-14T05:04:22+09:00
-categories :
+categories:
  - "diary"
+toc: false
 ---
 
 # Blogを始めた

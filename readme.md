@@ -40,7 +40,7 @@ git push origin master
 
 `hugo server`
 でローカルにサーバーを立ち上げてブラウザ上で確認できるようになる.
-[http://localhost:1313/](http://localhost:1313/)がそのリンク先.
+[http://localhost:1313/blog](http://localhost:1313/blog)がそのリンク先.
 
 そして下書き記事を正式な記事にしてコンパイルし変更をコミットする.
 
