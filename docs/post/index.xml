@@ -12,12 +12,15 @@
     
     
     <item>
-      <title>初投稿です</title>
+      <title>初投稿</title>
       <link>https://browniealice.github.io/blog/post/first_post/</link>
       <pubDate>Mon, 14 Aug 2017 05:04:22 +0900</pubDate>
       
       <guid>https://browniealice.github.io/blog/post/first_post/</guid>
-      <description>Blogを始めた 初投稿です. BrownieAliceと申します. 昔からBlogを始めてはすぐ辞めてを繰り返していたのですが, そろそろきちんとBlogを書きたいなと思い立ちました. Hugoを用いてGithub Pagesで公開しています. それではよろしくお願い致します.</description>
+      <description>Blogを始めた 初投稿です. BrownieAliceと申します.
+昔からBlogを始めてはすぐ辞めてを繰り返していたのですが, そろそろきちんとBlogを書きたいなと思い立ちました.
+Hugoを用いてGithub Pagesで公開しています. 中身は https://github.com/BrownieAlice/blog にて公開してあります.
+それではよろしくお願い致します.</description>
     </item>
     
   </channel>
