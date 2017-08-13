@@ -3,3 +3,8 @@ languageCode = "ja-JP"
 title = "Alice in the Machine - Blog"
 theme = "hugo_theme_robust"
 publishDir = "docs"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+series = "series"
