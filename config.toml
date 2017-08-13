@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://browniealice.github.io/blog/"
 languageCode = "ja-JP"
 title = "Alice in the Machine - Blog"
 theme = "hugo_theme_robust"
