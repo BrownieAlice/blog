@@ -44,6 +44,19 @@ git push origin master
 
 そして下書き記事を正式な記事にしてコンパイルし変更をコミットする.
 
+### カテゴリー
+カテゴリとして`po`と`popo`を追加する場合, 記事の最初のフロントマターを以下のように設定します.
+
+```yaml
+---
+title: "hoge"
+date: piyo
+categories :
+ - "po"
+ - "popo"
+---
+```
+
 ## 参考サイト
 - [GitHub Pagesでブログ立ち上げ - Hugoを使う](https://www.kaitoy.xyz/2015/08/28/using-hugo/)
 - [GitHub Pagesの新機能、ソース設定が地味にいい](https://www.kaitoy.xyz/2016/08/18/simpler-github-pages-publishing/)
