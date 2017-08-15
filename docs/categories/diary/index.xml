@@ -6,10 +6,22 @@
     <description>Recent content in Diary on Alice in the Machine - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Mon, 14 Aug 2017 05:04:22 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 16 Aug 2017 00:18:07 +0900</lastBuildDate>
     
 	<atom:link href="https://browniealice.github.io/blog/categories/diary/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>wikiを作成した</title>
+      <link>https://browniealice.github.io/blog/post/create_wiki/</link>
+      <pubDate>Wed, 16 Aug 2017 00:18:07 +0900</pubDate>
+      
+      <guid>https://browniealice.github.io/blog/post/create_wiki/</guid>
+      <description>wikiについて Blogを作ったはいいものの, 技術的なことをまとめるのはBlogではなくwikiのほうがいいと思ったのでwikiを作りました. wikiは Alice in the Machine - wiki に公開してあります.
+wikiシステムについて ゆくゆくは自前の鯖借りて運用したいと思っていますが, とりあえずGitHub Pagesにて公開できるHPがいいので静的サイトに限定して考えました. また編集は自分1人ができればいいシステムにしようと思いました.
+MDwiki 最初はMDwikiを用いようと思いました. wikiで調べていると, 1人だけで運用しかつ静的サイトという条件だとそれがピッタリのようでした. ただ, syntax highlight周りにバグがありリリース版ではたまに無限ループするという自体がありました. それを避けようとして自分でmakeしてみるも生成されたmdwiki.htmlがうまく動作しないので断念しました.
+Hugo というわけで, MDwikiを断念し静的サイトジェネレータでwiki風なサイトを作ることにしました. まぁBlogと同じシステムがいいだろうというのと, ページが増えて重くなるのは困るという理由です. テーマは bootie-docs を選んだのですが, 上のタブが改行されたときの動作が微妙なのが難点. LEARN にしようか悩み中.</description>
+    </item>
     
     <item>
       <title>初投稿</title>

@@ -6,7 +6,7 @@ categories:
 toc: false
 ---
 
-# Blogを始めた
+## Blogを始めた
 初投稿です. BrownieAliceと申します.  
 昔からBlogを始めてはすぐ辞めてを繰り返していたのですが, そろそろきちんとBlogを書きたいなと思い立ちました.  
 Hugoを用いてGithub Pagesで公開しています. 中身は [https://github.com/BrownieAlice/blog](https://github.com/BrownieAlice/blog) にて公開してあります.  
