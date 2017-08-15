@@ -6,10 +6,23 @@
     <description>Recent content on Alice in the Machine - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 16 Aug 2017 00:18:07 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 16 Aug 2017 08:35:22 +0900</lastBuildDate>
     
 	<atom:link href="https://browniealice.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Disqusを導入した</title>
+      <link>https://browniealice.github.io/blog/post/disqus_introduce/</link>
+      <pubDate>Wed, 16 Aug 2017 08:35:22 +0900</pubDate>
+      
+      <guid>https://browniealice.github.io/blog/post/disqus_introduce/</guid>
+      <description>Disqusとは Disqus はブログのコメントシステムです. このブログはWebサービス型のブログは用いていないので, 当たり前ですがコメントシステムはありません.
+ただブログにはコメントが必要だろうということで, コメントシステムを設けたいと思いました. 調べてみると色々とシステムはあるようですがDisqusが一番メジャーみたいです.
+導入 導入は非常に簡単でした. というのDisqusが相当流行っているので, Hugoも使用したテーマもDisqusに対応していたのでちょちょっとやるだけでした. まず Disqus の GET STARTED より登録します. いろいろと設定していくと Shortname というのが渡されます. それを用いて config.toml を以下のように設定してやれば導入終了です.
+disqusShortname = &amp;quot;hoge&amp;quot;  簡単.
+所感 ただDisqus自体があまり匿名性を重視したサービスじゃないのが微妙かもしれない. やっぱインターネットといったら匿名なのが利点なので, そうじゃないシステムはあまり好きじゃない. それとコメントのガイドラインを求められるのでいつか設定しておかないとなという感じです. 現状何も指定していないので….</description>
+    </item>
     
     <item>
       <title>wikiを作成した</title>
