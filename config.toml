@@ -3,6 +3,7 @@ languageCode = "ja-JP"
 title = "Alice in the Machine - Blog"
 theme = "hugo_theme_robust"
 publishDir = "docs"
+disqusShortname = "alice-in-the-machine-blog"
 
 [taxonomies]
 tag = "tags"
