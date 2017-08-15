@@ -3,7 +3,7 @@ title: "wikiを作成した"
 date: 2017-08-16T00:18:07+09:00
 categories:
  - "diary"
-tag:
+tags:
  - "Hugo"
 toc: true
 ---

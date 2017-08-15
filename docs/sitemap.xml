@@ -30,6 +30,12 @@
   </url>
   
   <url>
+    <loc>https://browniealice.github.io/blog/tags/hugo/</loc>
+    <lastmod>2017-08-16T00:18:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://browniealice.github.io/blog/post/</loc>
     <lastmod>2017-08-16T00:18:07+09:00</lastmod>
     <priority>0</priority>
@@ -42,6 +48,7 @@
   
   <url>
     <loc>https://browniealice.github.io/blog/tags/</loc>
+    <lastmod>2017-08-16T00:18:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
