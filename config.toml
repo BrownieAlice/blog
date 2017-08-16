@@ -5,7 +5,7 @@ theme = "hugo_theme_robust"
 publishDir = "docs"
 disqusShortname = "alice-in-the-machine-blog"
 hasCJKLanguage = true
-copyright = "Copyright &copy; 2017-2017, BrownieAlice.<br><a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='クリエイティブ・コモンズ・ライセンス' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/4.0/80x15.png' /></a><br />この作品は <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a> の下に提供されています."
+copyright = "Copyright &copy; 2017-2017, BrownieAlice.<br><a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='クリエイティブ・コモンズ・ライセンス' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/4.0/80x15.png' /></a><br>このサイトのテキストは原則として <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a> の下に提供されています."
 
 [taxonomies]
 tag = "tags"
