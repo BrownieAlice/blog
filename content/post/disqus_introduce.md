@@ -8,7 +8,7 @@ tags:
 toc: true
 thumbnail: "images/disqus_introduce/icon.svg"
 ---
-サムネイルは [Disqus](https://disqus.com/) の [Logo](https://disqus.com/brand/) より引用.
+ヘッダ画像は [Disqus](https://disqus.com/) の [Logo](https://disqus.com/brand/) より引用.
 ## Disqusとは
 [Disqus](https://disqus.com/) はブログのコメントシステムです. このブログはWebサービス型のブログは用いていないので, 当たり前ですがコメントシステムはありません.  
 ただブログにはコメントが必要だろうということで, コメントシステムを設けたいと思いました. 調べてみると色々とシステムはあるようですがDisqusが一番メジャーみたいです.
