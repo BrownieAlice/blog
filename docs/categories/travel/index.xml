@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on Alice in the Machine - Blog</title>
-    <link>https://browniealice.github.io/blog/series/</link>
-    <description>Recent content in Series on Alice in the Machine - Blog</description>
+    <title>Travel on Alice in the Machine - Blog</title>
+    <link>https://browniealice.github.io/blog/categories/travel/</link>
+    <description>Recent content in Travel on Alice in the Machine - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>Copyright &amp;copy; 2017-2017, BrownieAlice.&lt;br&gt;&lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;&lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;&lt;/a&gt;&lt;br&gt;このサイトのテキストは原則として &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt; の下に提供されています.</copyright>
+    <lastBuildDate>Thu, 24 Aug 2017 00:15:15 +0900</lastBuildDate>
     
-	<atom:link href="https://browniealice.github.io/blog/series/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://browniealice.github.io/blog/categories/travel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>金沢聖地巡礼</title>
-      <link>https://browniealice.github.io/blog/series/%E9%87%91%E6%B2%A2%E8%81%96%E5%9C%B0%E5%B7%A1%E7%A4%BC/</link>
+      <title>金沢聖地巡礼1日目</title>
+      <link>https://browniealice.github.io/blog/post/visit-kanazawa-1day/</link>
       <pubDate>Thu, 24 Aug 2017 00:15:15 +0900</pubDate>
       
-      <guid>https://browniealice.github.io/blog/series/%E9%87%91%E6%B2%A2%E8%81%96%E5%9C%B0%E5%B7%A1%E7%A4%BC/</guid>
-      <description></description>
+      <guid>https://browniealice.github.io/blog/post/visit-kanazawa-1day/</guid>
+      <description>金沢聖地巡礼 諸事情により金沢へ行かなければならなかったので, ついでにと思い 花咲くいろは/true tears/Angel Beats! の聖地巡礼をしてきました. 日程は8/17</description>
     </item>
     
   </channel>
