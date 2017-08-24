@@ -37,7 +37,7 @@ thumbnail: "images/visit-kanazawa-1day/kanazawa_station.JPG"
 その後は少し時間があったので本屋でコンパス時刻表を買いました. 行きたい駅の地理関係が全くわからないのに時刻表をもっていないのは怖かったので….  
 そして七尾行きの電車に乗車.
 
-## 西岸駅まで
+### 西岸駅まで
 花咲くいろはに出てくる湯之鷺駅のモデル事西岸駅に向かいます. 七尾まで田園風景を楽しむこと1時間半. 七尾駅に到着です.  
 この後はのと鉄道にのって西岸駅をめざします. ここでなんと, 運良くラッピング電車に乗車することができました.
 {{< figure src="../../images/visit-kanazawa-1day/wrapping_train.JPG" title="ラッピング電車" >}}
@@ -52,7 +52,7 @@ thumbnail: "images/visit-kanazawa-1day/kanazawa_station.JPG"
 {{< figure src="../../images/visit-kanazawa-1day/station_inside.JPG" title="駅内部" >}}
 {{< figure src="../../images/visit-kanazawa-1day/otaku_note.JPG" title="駅ノート" >}}
 
-## 高岡駅まで
+### 高岡駅まで
 西岸駅に1時間弱いた後は, 1回七尾に戻りそこからバスで高岡駅に行きます. 当初はそのまま金沢に戻る予定だったのですが, よく切符を見たらバスを使って高岡に行けるみたいなので行きました.  
 使ったのはわくライナー. 無料wifiが使えるって書いてあってアクセスしてみたらインターネット通信をしてくれなかった. 悲しい…. あとあんま人いなかったんですけど大丈夫なんですかね….  
 インターネットは諦めて1時間半ほど寝ていたら高岡駅に着きました. 高岡駅はtrue tearsの聖地があります.  
@@ -64,7 +64,7 @@ thumbnail: "images/visit-kanazawa-1day/kanazawa_station.JPG"
 {{< figure src="../../images/visit-kanazawa-1day/aichan.JPG" title="あいちゃん">}}
 {{< figure src="../../images/visit-kanazawa-1day/inside_aichan.JPG" title="あいちゃん店内">}}
 
-## ホテルまで
+### ホテルまで
 HACHI-HACHIを出たのが19時頃といいお時間. さすがにもうホテルのある金沢に戻ります.  
 金沢は金沢駅は市の中心部ではなく香林坊という場所が中心部. ホテルもそっち側にあります.  
 Googleマップの所要時間(自動車)を徒歩の所要時間と勘違いし, 金沢駅から香林坊へ歩き始めてしまいました. しかし不幸にもいきなり大雨に見舞われてしまいました. 辛い.  
