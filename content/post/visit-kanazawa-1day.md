@@ -7,6 +7,7 @@ tags:
   - "pilgrimage"
 series:
   - "金沢聖地巡礼"
+toc: true
 thumbnail: "images/visit-kanazawa-1day/kanazawa_station.JPG"
 ---
 
