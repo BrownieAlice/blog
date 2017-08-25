@@ -9,7 +9,6 @@ series:
   - "金沢聖地巡礼"
 toc: true
 thumbnail: "images/visit-kanazawa-2day/hill.JPG"
-draft: true
 ---
 
 ## 行程
