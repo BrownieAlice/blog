@@ -19,50 +19,50 @@ thumbnail: "images/visit-kanazawa-2day/hill.JPG"
 朝は晴れていたのですが, ついたら結構雨が降っていました. 運が悪い…  
 歩いていたらまずあの坂道を発見しました. あとEDのベンチも 花咲くいろはの雰囲気を感じました.
 
-{{< figure src="../../images/visit-kanazawa-2day/hill.JPG" title="坂道" >}}
-{{< figure src="../../images/visit-kanazawa-2day/bench.JPG" title="ベンチ" >}}
+{{% img src="images/visit-kanazawa-2day/hill.JPG" caption="坂道" %}}
+{{% img src="images/visit-kanazawa-2day/bench.JPG" caption="ベンチ" %}}
 
 ### 喜翆荘
 湯涌温泉についた後は喜翆荘を目指しました. 喜翆荘は坂を登った上にあります.  
 結構雨が降っている中, 坂道を登るのはちょっとつらかったです.
 坂を登ると喜翆荘の跡地を見つけました.
 
-{{< figure src="../../images/visit-kanazawa-2day/kissuiso.JPG" title="喜翆荘" >}}
+{{% img src="images/visit-kanazawa-2day/kissuiso.JPG" caption="喜翆荘" %}}
 
 喜翆荘のモデルは白雲楼ホテルだそうで, ちょっとした小屋に当時の写真が乗っていました.  
 結構豪華なホテルだったんですね….
 
-{{< figure src="../../images/visit-kanazawa-2day/hakuunro.JPG" title="白雲楼ホテル" >}}
+{{% img src="images/visit-kanazawa-2day/hakuunro.JPG" caption="白雲楼ホテル" %}}
 
 ### 白鷺の湯
 雨が強くて小屋でしばらく雨宿りしてたんですが, ここにいてもしょうがないってことで白鷺の湯に行くことにしました.  
 喜翆荘跡地からは林の中のちょっとした小道を下っていきます. 虫がすごいよってきてつらい…  
 白鷺の湯の前にはこんな感じの階段があります. ちょっと登ったところには足湯もありました.  
 
-{{< figure src="../../images/visit-kanazawa-2day/stairs.JPG" title="階段" >}}
+{{% img src="images/visit-kanazawa-2day/stairs.JPG" caption="階段" %}}
 
 また上まで登ると湯涌稲荷神社があります. 鳥居も3つ立ってます.
 
-{{< figure src="../../images/visit-kanazawa-2day/torii.JPG" title="湯涌稲荷神社" >}}
+{{% img src="images/visit-kanazawa-2day/torii.JPG" caption="湯涌稲荷神社" %}}
 
 さて階段の下には白鷺の湯があります. 雨で結構濡れてしまったので一回入ってきました.  
 中には花咲くいろはのポスターや, ラッピングされた自動販売機とかおいてありました.  
 入口には岸田メル先生がサインされた自動販売機もおいてありました.  
 浴場はありがちな銭湯という感じで, 石鹸などは販売しているのみでした.
 
-{{< figure src="../../images/visit-kanazawa-2day/shirasagi.JPG" title="白鷺の湯" >}}
-{{< figure src="../../images/visit-kanazawa-2day/vending.JPG" title="自動販売機" >}}
+{{% img src="images/visit-kanazawa-2day/shirasagi.JPG" caption="白鷺の湯" %}}
+{{% img src="images/visit-kanazawa-2day/vending.JPG" caption="自動販売機" %}}
 
 ### 周辺散策
 白鷺の湯でのんびりしていたら幸いにも雨が上がりました.  
 雨が降っていて行くのを諦めた池の方に行くことにしました. ただ林の中の行けって感じで虫が非常に寄ってきました. ハエが10匹くらいとまったり….  
 白雲楼ホテルがあったときはここからその姿が見えたのでしょうか?
 
-{{< figure src="../../images/visit-kanazawa-2day/lake.JPG" title="池" >}}
+{{% img src="images/visit-kanazawa-2day/lake.JPG" caption="池" %}}
 
 また白鷺の湯から少し離れると, 秀峰閣ホテルが見れます. 小奇麗な感じでここら変だと目立ちますね.
 
-{{< figure src="../../images/visit-kanazawa-2day/shuhokaku.JPG" title="秀峰閣" >}}
+{{% img src="images/visit-kanazawa-2day/shuhokaku.JPG" caption="秀峰閣" %}}
 
 時間がなかったのでこの辺で金沢に戻りました. 湯涌温泉観光協会とか行きたかったです.  
 湯涌温泉自体は地方の温泉街という感じでした. 特に目立った観光名所もありませんでしたね.  

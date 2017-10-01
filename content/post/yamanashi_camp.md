@@ -21,38 +21,38 @@ thumbnail: "images/yamanashi_camp/water_mill.JPG"
 というわけでバスに揺られながら忍野八海に行きました. 1日目に見学した工場も忍野村にあるので, 宿から戻ってきた感じがしてちょっと不思議な気分です.  
 バス停の忍野八海(大橋)から歩いて5分弱で観光地っぽい雰囲気の場所に出ました. まず行ったのは湧池の近くです. 水車があったりお土産屋があったりとわりと栄えてそうな場所でした.
 
-{{% img src="images/yamanashi_camp/water_mill.JPG" w="600" caption="水車" %}}
+{{% img src="images/yamanashi_camp/water_mill.JPG" caption="水車" %}}
 
 次に行ったのは底抜池とかがある場所です. かなり大きい榛の木池があって, その周辺に資料館や花壇や忍野八海のうちのいくつかの池がある感じでした.  
 記事を書くまで勘違いしていたのですが, 榛の木池は忍野八海の1つではないんですね…. ただの人工池だとか….
 
-{{% img src="images/yamanashi_camp/hannoki_lake.JPG" w="600" caption="榛の木池" %}}
+{{% img src="images/yamanashi_camp/hannoki_lake.JPG" caption="榛の木池" %}}
 
 その後はお釜池の方に行ったり出口池の方に行ったりして, 忍野八海の八海全てを見てきました. ただあいにく曇だったので富士山が見えずなんとも言えない感じでしたね….  
 黄色い某社にでも就職しない限り, 自発的に行くことはもう無いでしょう.  
 
-{{% img src="images/yamanashi_camp/okama_lake.JPG" w="600" caption="お釜池" %}}
+{{% img src="images/yamanashi_camp/okama_lake.JPG" caption="お釜池" %}}
 
 忍野八海を全部見終わってもまだ12時程度だったので, 青木ヶ原樹海に行こうという話になりました. 昼飯はバス停近くでそばをパッと食べて, 河口湖駅を経由してバスで青木ヶ原樹海へと向かいました.
 
-{{% img src="images/yamanashi_camp/bus.JPG" w="600" caption="バス" %}}
+{{% img src="images/yamanashi_camp/bus.JPG" caption="バス" %}}
 
 最初に行ったのは氷穴というところ. 私は実は昔行ったことがあるようでしたが記憶になかったです.  
 割と小さいですが涼しくてちょっとだけ面白い場所でした. あと入場ゲートにいる説明役のお兄さんが面白かったです.
 
-{{% img src="images/yamanashi_camp/ice_cave.JPG" w="600" caption="氷穴" %}}
+{{% img src="images/yamanashi_camp/ice_cave.JPG" caption="氷穴" %}}
 
 その後は樹海を通って風穴の方に向かいました. 富士の樹海というと何を思い浮かべるでしょうか…. そういった類の看板があってビックリしました.
 
-{{% img src="images/yamanashi_camp/aokigahara_signboard.JPG" w="400" caption="看板" %}}
+{{% img src="images/yamanashi_camp/aokigahara_signboard.JPG" caption="看板" %}}
 
 樹海は最初は面白かったのですが, どこ歩いてもあまり代わり映えしない景色ですぐ飽きてしまいました. 遊歩道があるので迷わないのですが, 遊歩道を外れて歩くとすぐ迷いそうですね….  
 
-{{% img src="images/yamanashi_camp/aokigahara.JPG" w="600" caption="青木ヶ原樹海" %}}
+{{% img src="images/yamanashi_camp/aokigahara.JPG" caption="青木ヶ原樹海" %}}
 
 たどり着いた風穴. 氷穴よりは広くてちょっとした展示もありました. とは言え, こんなもんかって感じでしたけど….
 
-{{% img src="images/yamanashi_camp/wind_cave.JPG" w="400" caption="風穴" %}}
+{{% img src="images/yamanashi_camp/wind_cave.JPG" caption="風穴" %}}
 
 この後は近くの温泉に行ったりBBQしたり同期が女装したりしてました. 
 
@@ -61,7 +61,7 @@ thumbnail: "images/yamanashi_camp/water_mill.JPG"
 近くに赤富士ワインセラーという施設があり, ワインの試飲をしてきました. 私は結構お酒に弱いので数口試飲しただけで赤くなってしまいましたが….  
 その後は山梨の郷土料理であるほうとうを食べました. ほうとうは結構有名だとは思いますが, 意外と食べる機会ってないのでよかったです.
 
-{{% img src="images/yamanashi_camp/hoto.jpg" w="600" caption="ほうとう" %}}
+{{% img src="images/yamanashi_camp/hoto.jpg" caption="ほうとう" %}}
 
 ## 感想
 旅行としてのサークル合宿って行き先決めるの結構難しいですよね. そこまで遠くなくてみんなが楽しめる場所ってなかなか無い気がします. 聖地もアニメ見てない人もいるのでって感じです…. 個人的には箱根とか良さそうかなって思いましたがお値段が結構上がっちゃうのが難点.  

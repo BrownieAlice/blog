@@ -32,42 +32,42 @@ thumbnail: "images/visit-kanazawa-3day/hill.JPG"
 まず降りたバス停の近くの自然研付近を回りました. 自然研の食堂があの食堂らしいということで行きました.  
 残念ながら中には入れませんがそれっぽい雰囲気です.
 
-{{< figure src="../../images/visit-kanazawa-3day/cafeteria.JPG" title="食堂" >}}
+{{% img src="images/visit-kanazawa-3day/cafeteria.JPG" caption="食堂" %}}
 
 外観はこんな感じ.
 
-{{< figure src="../../images/visit-kanazawa-3day/appearance.JPG" title="外観" >}}
+{{% img src="images/visit-kanazawa-3day/appearance.JPG" caption="外観" %}}
 
 次に北地区に向かいます. 途中のアカンサスインターフェイスが天使ちゃんの登場シーンのあの橋にすごい似ています.
 
-{{< figure src="../../images/visit-kanazawa-3day/bridge.JPG" title="橋" >}}
+{{% img src="images/visit-kanazawa-3day/bridge.JPG" caption="橋" %}}
 
 そしてそこの近くには1話の狙撃地点があります. ちょっと草が生い茂っていて微妙ですが, でも雰囲気は似ています.
 
-{{< figure src="../../images/visit-kanazawa-3day/sniper_point.JPG" title="狙撃地点" >}}
+{{% img src="images/visit-kanazawa-3day/sniper_point.JPG" caption="狙撃地点" %}}
 
 ### 城端駅
 金沢大学を出た後はバスで福光駅に向かいます. 来たのはラッピングバスで 花咲くいろは/true tears/グラスリップ の宣伝がされていました.  
 福光駅に来た後は少し待った後, 電車で城端駅に行きました. 乗り過ごしそうでちょっとヤバかった.  
 城端駅はもうオタク要素はなくなっていたようで, 普通の駅になってしまいました. 仕方ないでしょうけどちょっと悲しかった.
 
-{{< figure src="../../images/visit-kanazawa-3day/jyohana_station.JPG" title="城端駅" >}}
+{{% img src="images/visit-kanazawa-3day/jyohana_station.JPG" caption="城端駅" %}}
 
 あのスーパーマーケットがありました. 名前がセフレっていう….
 
-{{< figure src="../../images/visit-kanazawa-3day/super_market.JPG" title="スーパーマーケット" >}}
+{{% img src="images/visit-kanazawa-3day/super_market.JPG" caption="スーパーマーケット" %}}
 
 true tearsの聖地とされているところに行くと, ココらへんの一角だけアニメで見たような雰囲気が漂っていました.  
 あの微妙な空気になる交差点もありましたが, ここの場所だけ都会な雰囲気が出ていました. この一角以外はすごい田舎って雰囲気だったんですけどね….
 
 
-{{< figure src="../../images/visit-kanazawa-3day/hill.JPG" title="坂道" >}}
+{{% img src="images/visit-kanazawa-3day/hill.JPG" caption="坂道" %}}
 
-{{< figure src="../../images/visit-kanazawa-3day/intersection.JPG" title="交差点" >}}
+{{% img src="images/visit-kanazawa-3day/intersection.JPG" caption="交差点" %}}
 
 交差点の横の通りには趣のあるお寺とかがありました. すごい趣を感じて, この周囲だけすごいアニメ的雰囲気を強く感じました.
 
-{{< figure src="../../images/visit-kanazawa-3day/temple.JPG" title="寺" >}}
+{{% img src="images/visit-kanazawa-3day/temple.JPG" caption="寺" %}}
 
 時間的にもう帰らないといけなかったので, ここから金沢駅に戻り帰りました.  
 金沢, 結構巡礼できなかった聖地も多かったのでもう一回行きたいなと思いました.

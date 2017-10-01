@@ -26,7 +26,7 @@ thumbnail: "images/2017ABUrobocon/miyabi.JPG"
 日本からはNHK学生ロボコン2017で優勝した東工大のMaquinistaと準優勝の東大のRoboTechが出場しました.  
 RoboTechはワイルドカードで決勝リーグ進出なるもマレーシアのマレーシア工科大学のチームに敗北してベスト8になりました. Maquinistaは順調に勝ち進むもベトナムのラクホン大学に敗北しベスト4になりました.
 
-{{% img src="images/2017ABUrobocon/miyabi.JPG" w="600" caption="Maquinistaの機体こと雅" %}}
+{{% img src="images/2017ABUrobocon/miyabi.JPG" caption="Maquinistaの機体こと雅" %}}
 
 ## 参加して思ったこと
 言い訳がましいことと, 僕がこんなこと書いてもいいのかってことがありますがご了承ください. 
