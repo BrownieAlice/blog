@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Alice in the Machine - Blog</title>
-    <link>https://browniealice.github.io/blog/tags/hugo/</link>
+    <link>https://blog.browniealice.net/tags/hugo/</link>
     <description>Recent content in Hugo on Alice in the Machine - Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>Copyright &amp;copy; 2017-2017, BrownieAlice.&lt;br&gt;&lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;&lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;&lt;/a&gt;&lt;br&gt;このサイトのテキストは原則として &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt; の下に提供されています.</copyright>
     <lastBuildDate>Fri, 25 Aug 2017 12:31:46 +0900</lastBuildDate>
     
-	<atom:link href="https://browniealice.github.io/blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.browniealice.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>wikiのデザインを変えた</title>
-      <link>https://browniealice.github.io/blog/post/wiki_renewal/</link>
+      <link>https://blog.browniealice.net/post/wiki_renewal/</link>
       <pubDate>Fri, 25 Aug 2017 12:31:46 +0900</pubDate>
       
-      <guid>https://browniealice.github.io/blog/post/wiki_renewal/</guid>
+      <guid>https://blog.browniealice.net/post/wiki_renewal/</guid>
       <description>wikiのデザインを変えました. テーマはdocdockを使いました. 名前の通りドキュメントをまとめるのに使いやすそうなwiki. ようやくwi</description>
     </item>
     
     <item>
       <title>Disqusを導入した</title>
-      <link>https://browniealice.github.io/blog/post/disqus_introduce/</link>
+      <link>https://blog.browniealice.net/post/disqus_introduce/</link>
       <pubDate>Wed, 16 Aug 2017 08:35:22 +0900</pubDate>
       
-      <guid>https://browniealice.github.io/blog/post/disqus_introduce/</guid>
+      <guid>https://blog.browniealice.net/post/disqus_introduce/</guid>
       <description>ヘッダ画像は Disqus の Logo より引用. Disqusとは Disqus はブログのコメントシステムです. このブログはWebサービス型のブログは用いていないので, 当たり</description>
     </item>
     
     <item>
       <title>wikiを作成した</title>
-      <link>https://browniealice.github.io/blog/post/create_wiki/</link>
+      <link>https://blog.browniealice.net/post/create_wiki/</link>
       <pubDate>Wed, 16 Aug 2017 00:18:07 +0900</pubDate>
       
-      <guid>https://browniealice.github.io/blog/post/create_wiki/</guid>
+      <guid>https://blog.browniealice.net/post/create_wiki/</guid>
       <description>wikiについて Blogを作ったはいいものの, 技術的なことをまとめるのはBlogではなくwikiのほうがいいと思ったのでwikiを作りました</description>
     </item>
     
