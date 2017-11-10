@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.browniealice.net/post/build_server/</loc>
+    <lastmod>2017-11-10T09:05:53+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.browniealice.net/post/laboratory/</loc>
     <lastmod>2017-10-01T22:56:43+09:00</lastmod>
   </url>
@@ -54,7 +59,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/</loc>
-    <lastmod>2017-10-01T22:56:43+09:00</lastmod>
+    <lastmod>2017-11-10T09:05:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -65,7 +70,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/categories/diary/</loc>
-    <lastmod>2017-10-01T22:56:43+09:00</lastmod>
+    <lastmod>2017-11-10T09:05:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,7 +94,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/post/</loc>
-    <lastmod>2017-10-01T22:56:43+09:00</lastmod>
+    <lastmod>2017-11-10T09:05:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -101,6 +106,12 @@
   
   <url>
     <loc>https://blog.browniealice.net/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.browniealice.net/tags/server/</loc>
+    <lastmod>2017-11-10T09:05:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
