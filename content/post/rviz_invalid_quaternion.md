@@ -6,7 +6,6 @@ categories:
 tags:
  - "ROS"
 thumbnail: "images/rviz_invalid_quaternion/thumnail.png"
-draft: true
 ---
 
 前までやってたとおりにrviz上でvisualization_msgsのMarkerを表示させようとしたら表示されない. よくよく見てみると
