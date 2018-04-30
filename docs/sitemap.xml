@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.browniealice.net/post/ros-lunar_on_arch/</loc>
+    <lastmod>2018-04-30T21:48:13+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.browniealice.net/post/latex_transpose/</loc>
     <lastmod>2018-01-14T00:50:09+09:00</lastmod>
   </url>
@@ -79,7 +84,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/</loc>
-    <lastmod>2018-01-14T00:50:09+09:00</lastmod>
+    <lastmod>2018-04-30T21:48:13+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -120,7 +125,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/post/</loc>
-    <lastmod>2018-01-14T00:50:09+09:00</lastmod>
+    <lastmod>2018-04-30T21:48:13+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -132,7 +137,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/tags/ros/</loc>
-    <lastmod>2018-01-02T00:09:13+09:00</lastmod>
+    <lastmod>2018-04-30T21:48:13+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -155,7 +160,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/categories/technote/</loc>
-    <lastmod>2018-01-14T00:50:09+09:00</lastmod>
+    <lastmod>2018-04-30T21:48:13+09:00</lastmod>
     <priority>0</priority>
   </url>
   
