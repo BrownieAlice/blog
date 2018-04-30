@@ -43,7 +43,7 @@ yaourt -S ros-lunar-desktop-full
 前者はAURにある[python-empy](https://aur.archlinux.org/packages/python-empy/)をインストールすることで解決します.  
 後者は, 依存関係により[python2-catkin_pkg](https://aur.archlinux.org/packages/python2-catkin_pkg/)がインストールされているはずなのですが何故か認識されません.
 なので, pipの `catkin-pkg` を無理やり入れて解決しました.  
-結果としては以下のコマンドを売ってから `catkin_make` しました.
+結果としては以下のコマンドを打ってから `catkin_make` しました.
 
 ```bash
 yaourt -S python-empy
