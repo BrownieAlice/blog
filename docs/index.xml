@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
     <copyright>Copyright &amp;copy; 2017-2018, BrownieAlice.&lt;br&gt;&lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;&lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;&lt;/a&gt;&lt;br&gt;このサイトのテキストは原則として &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt; の下に提供されています.</copyright>
-    <lastBuildDate>Mon, 30 Apr 2018 21:48:13 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 02 Sep 2018 03:51:18 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.browniealice.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Arch LinuxでESP32の環境を構築(Arduino IDE)</title>
+      <link>https://blog.browniealice.net/post/arch_esp32_arduino_ide/</link>
+      <pubDate>Sun, 02 Sep 2018 03:51:18 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/arch_esp32_arduino_ide/</guid>
+      <description>ESP32とは ESP32はWifiモジュールとBluetoothモジュールがついてデュアルコアなIoTマイコンです. 秋月電子でもESP32の</description>
+    </item>
     
     <item>
       <title>Arch LinuxでROS Lunarを使う</title>
