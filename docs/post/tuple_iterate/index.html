@@ -12,7 +12,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://blog.browniealice.net/favicon.ico">
 
 
-<link rel="canonical" href="https://blog.browniealice.net/post/visit-kanazawa-2day/">
+<link rel="canonical" href="https://blog.browniealice.net/post/tuple_iterate/">
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -26,25 +26,25 @@
     
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>金沢聖地巡礼2日目 - Alice in the Machine - Blog</title>
+    <title>std::tupleの全要素の走査 - Alice in the Machine - Blog</title>
     
 
-<meta name="description" content="行程 この日は午後から別の用事があったので, 午前だけ聖地巡礼しました. ただ実は最近あった土砂崩れによって8/8から湯涌温泉に行くバスが途中で止">
+<meta name="description" content="C&#43;&#43;には std::tuple というタプル型が存在します. タプル型の全要素についてある処理を行いたい場合に, これといったやり方がないように思えます. そこで std::tuple の">
 
-<meta property="og:title" content="金沢聖地巡礼2日目 - Alice in the Machine - Blog">
+<meta property="og:title" content="std::tupleの全要素の走査 - Alice in the Machine - Blog">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.browniealice.net/post/visit-kanazawa-2day/">
-<meta property="og:image" content="https://blog.browniealice.net/images/visit-kanazawa-2day/hill.JPG">
+<meta property="og:url" content="https://blog.browniealice.net/post/tuple_iterate/">
+<meta property="og:image" content="https://blog.browniealice.net/images/tuple_iterate/thumnail.png">
 <meta property="og:site_name" content="Alice in the Machine - Blog">
-<meta property="og:description" content="行程 この日は午後から別の用事があったので, 午前だけ聖地巡礼しました. ただ実は最近あった土砂崩れによって8/8から湯涌温泉に行くバスが途中で止">
+<meta property="og:description" content="C&#43;&#43;には std::tuple というタプル型が存在します. タプル型の全要素についてある処理を行いたい場合に, これといったやり方がないように思えます. そこで std::tuple の">
 <meta property="og:locale" content="ja_JP">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="Alice in the Machine - Blog">
-<meta name="twitter:url" content="https://blog.browniealice.net/post/visit-kanazawa-2day/">
-<meta name="twitter:title" content="金沢聖地巡礼2日目 - Alice in the Machine - Blog">
-<meta name="twitter:description" content="行程 この日は午後から別の用事があったので, 午前だけ聖地巡礼しました. ただ実は最近あった土砂崩れによって8/8から湯涌温泉に行くバスが途中で止">
-<meta name="twitter:image" content="https://blog.browniealice.net/images/visit-kanazawa-2day/hill.JPG">
+<meta name="twitter:url" content="https://blog.browniealice.net/post/tuple_iterate/">
+<meta name="twitter:title" content="std::tupleの全要素の走査 - Alice in the Machine - Blog">
+<meta name="twitter:description" content="C&#43;&#43;には std::tuple というタプル型が存在します. タプル型の全要素についてある処理を行いたい場合に, これといったやり方がないように思えます. そこで std::tuple の">
+<meta name="twitter:image" content="https://blog.browniealice.net/images/tuple_iterate/thumnail.png">
 
 
 <script type="application/ld+json">
@@ -55,15 +55,15 @@
       "@type": "WebPage",
       "@id":"https://blog.browniealice.net/"
     },
-    "headline": "金沢聖地巡礼2日目 - Alice in the Machine - Blog",
+    "headline": "std::tupleの全要素の走査 - Alice in the Machine - Blog",
     "image": {
       "@type": "ImageObject",
-      "url": "https://blog.browniealice.net/images/visit-kanazawa-2day/hill.JPG",
+      "url": "https://blog.browniealice.net/images/tuple_iterate/thumnail.png",
       "height": 800,
       "width": 800
     },
-    "datePublished": "2017-08-25T17:30:04JST",
-    "dateModified": "2017-08-25T17:30:04JST",
+    "datePublished": "2018-12-29T04:24:53JST",
+    "dateModified": "2018-12-29T04:24:53JST",
     "author": {
       "@type": "Person",
       "name": "Alice in the Machine - Blog"
@@ -78,7 +78,7 @@
         "height": 60
       }
     },
-    "description": "行程 この日は午後から別の用事があったので, 午前だけ聖地巡礼しました. ただ実は最近あった土砂崩れによって8/8から湯涌温泉に行くバスが途中で止"
+    "description": "C++には std::tuple というタプル型が存在します. タプル型の全要素についてある処理を行いたい場合に, これといったやり方がないように思えます. そこで std::tuple の"
   }
 </script>
 
@@ -111,221 +111,119 @@
 
     <article class="sn">
 
-  <div class="thumb thumb-90d8043764845801f2f7c82539db3f8b"></div>
+  <div class="thumb thumb-ccfa4171f088fe2977fc00a57b5f49b1"></div>
 
   <header class="article-header">
-    <h1 class="title">金沢聖地巡礼2日目</h1>
+    <h1 class="title">std::tupleの全要素の走査</h1>
 
     <ul class="facts">
-      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-08-25T17:30:04JST">Aug 25, 2017</time></li>
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-12-29T04:24:53JST">Dec 29, 2018</time></li>
       <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.browniealice.net/post/">POST</a></li>
       
     </ul>
 
     <aside class="share">
-  <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f&title=%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
-  <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f&text=%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f&t=%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-  <a href="https://plus.google.com/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-  <a href="http://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f&title=%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fa fa-get-pocket" aria-hidden="true"></i></a>
-  <a href="http://line.me/R/msg/text/?%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow">LINE</a>
+  <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f&title=std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f&text=std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f&t=std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://plus.google.com/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  <a href="http://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f&title=std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fa fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="http://line.me/R/msg/text/?std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow">LINE</a>
 </aside>
 
   </header>
 
   
-  <div class="toc">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#行程">行程</a>
-<ul>
-<li><a href="#湯涌温泉着">湯涌温泉着</a></li>
-<li><a href="#喜翆荘">喜翆荘</a></li>
-<li><a href="#白鷺の湯">白鷺の湯</a></li>
-<li><a href="#周辺散策">周辺散策</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-  </div>
-  
 
   <div class="article-body">
 
-<h2 id="行程">行程</h2>
+<p>C++には <code>std::tuple</code> というタプル型が存在します.<br />
+タプル型の全要素についてある処理を行いたい場合に, これといったやり方がないように思えます.<br />
+そこで <code>std::tuple</code> の全要素の走査のやり方についての個人的にメモしておきます.</p>
 
-<p>この日は午後から別の用事があったので, 午前だけ聖地巡礼しました. ただ実は最近あった土砂崩れによって8/8から湯涌温泉に行くバスが途中で止まってしまうようでした.<br />
-そのため金沢駅から湯涌温泉までタクシーで行きました. 価格は迂回したせいか8000円. 4人で割り勘しましたが高い…. 時間は40分くらい?</p>
+<h2 id="我流">我流</h2>
 
-<h3 id="湯涌温泉着">湯涌温泉着</h3>
+<p>私がよくやるやり方です.<br />
+constexpr if文を使っているのでC++17以上出ないとコンパイルできません.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;tuple&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span>size_t N <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">void</span> iterate_tuple(<span style="color:#66d9ef">const</span> T <span style="color:#f92672">&amp;</span>t) {
+  <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">constexpr</span>(N <span style="color:#f92672">&lt;</span> std<span style="color:#f92672">::</span>tuple_size<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;::</span>value) {
+      <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>x <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>get<span style="color:#f92672">&lt;</span>N<span style="color:#f92672">&gt;</span>(t);
+      std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> x <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+      <span style="color:#75715e">// ここでやりたい処理を行う(今回は標準出力へ).
+</span><span style="color:#75715e"></span>
+      iterate_tuple<span style="color:#f92672">&lt;</span>N <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">&gt;</span>(t);
+  }
+}
 
-<p>朝は晴れていたのですが, ついたら結構雨が降っていました. 運が悪い…<br />
-歩いていたらまずあの坂道を発見しました. あとEDのベンチも 花咲くいろはの雰囲気を感じました.</p>
+<span style="color:#66d9ef">int</span> main() {
+  <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> t1 <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>make_tuple(<span style="color:#ae81ff">42</span>, <span style="color:#e6db74">&#34;browniealice&#34;</span>, <span style="color:#e6db74">&#34;po&#34;</span>, <span style="color:#ae81ff">3.14159</span>);
+  iterate_tuple(t1);
 
-<p><figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/hill.JPG" alt="坂道">
-  
-  <figcaption>
-    
-    坂道
-    
-  </figcaption>
-  
-</figure>
+  <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> t2 <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>make_tuple(<span style="color:#e6db74">&#34;maquinista&#34;</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">2.718</span>);
+  iterate_tuple(t2);
+}
+</code></pre></div>
+<p>出力</p>
 
-<figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/bench.JPG" alt="ベンチ">
-  
-  <figcaption>
-    
-    ベンチ
-    
-  </figcaption>
-  
-</figure>
-</p>
+<pre><code>42
+browniealice
+po
+3.14159
+maquinista
+18
+2.718
+</code></pre>
 
-<h3 id="喜翆荘">喜翆荘</h3>
+<p>N番目の要素にアクセスするというのを再帰的に行っています.<br />
+constexpr if文を使うことでスッキリした感じになってます.<br />
+インターネットで調べてみると, 結構複雑なやり方で行ってる例が多いですね<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.<br />
+このやり方ならコードの量も少なく, 直感的でわかりやすいのでいいかなと.</p>
 
-<p>湯涌温泉についた後は喜翆荘を目指しました. 喜翆荘は坂を登った上にあります.<br />
-結構雨が降っている中, 坂道を登るのはちょっとつらかったです.
-坂を登ると喜翆荘の跡地を見つけました.</p>
+<h2 id="boost-hanaを利用">Boost.Hanaを利用</h2>
 
-<figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/kissuiso.JPG" alt="喜翆荘">
-  
-  <figcaption>
-    
-    喜翆荘
-    
-  </figcaption>
-  
-</figure>
+<p><a href="https://stackoverflow.com/">Stack Overflow</a>を眺めていたら, <a href="https://stackoverflow.com/questions/1198260/iterate-over-tuple">c++ - iterate over tuple - Stack Overflow</a>の解答の中に<a href="http://boostorg.github.io/hana/">Boost.Hana</a>を使う方法が書いてありました.<br />
+Boost.Hanaって初めて聞きましたが, 我流の方法と同じことは以下のコードで出来るみたいです.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;tuple&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/hana.hpp&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;boost/hana/ext/std/tuple.hpp&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> t1 <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>make_tuple(<span style="color:#ae81ff">42</span>, <span style="color:#e6db74">&#34;browniealice&#34;</span>, <span style="color:#e6db74">&#34;po&#34;</span>, <span style="color:#ae81ff">3.14159</span>);
+  boost<span style="color:#f92672">::</span>hana<span style="color:#f92672">::</span>for_each(t1, [](<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>x) {std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> x <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;});
 
+  <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> t2 <span style="color:#f92672">=</span> std<span style="color:#f92672">::</span>make_tuple(<span style="color:#e6db74">&#34;maquinista&#34;</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">2.718</span>);
+  boost<span style="color:#f92672">::</span>hana<span style="color:#f92672">::</span>for_each(t2, [](<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>x) {std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> x <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;});
+}
+</code></pre></div>
+<p>ラムダ式指定するだけで良いんですね…. すごい.<br />
+似たようなライブラリとして<a href="http://boost.org/libs/fusion">Boost.Fusion</a>の <code>for_each</code> 関数があるみたいですが, こっちはラムダ式を引数に取れないのでちょっと使い勝手悪そうですね.<br />
+Boostあんま使いたくない/使えないときは我流のやり方で, Boostガンガン使えるときはBoost.Hanaを利用するやり方でやっていこうかなと思います.<br />
+しかし, Boostってホント色々あるんですね.</p>
+<div class="footnotes">
 
-<p>喜翆荘のモデルは白雲楼ホテルだそうで, ちょっとした小屋に当時の写真が乗っていました.<br />
-結構豪華なホテルだったんですね….</p>
+<hr />
 
-<figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/hakuunro.JPG" alt="白雲楼ホテル">
-  
-  <figcaption>
-    
-    白雲楼ホテル
-    
-  </figcaption>
-  
-</figure>
-
-
-<h3 id="白鷺の湯">白鷺の湯</h3>
-
-<p>雨が強くて小屋でしばらく雨宿りしてたんですが, ここにいてもしょうがないってことで白鷺の湯に行くことにしました.<br />
-喜翆荘跡地からは林の中のちょっとした小道を下っていきます. 虫がすごいよってきてつらい…<br />
-白鷺の湯の前にはこんな感じの階段があります. ちょっと登ったところには足湯もありました.</p>
-
-<figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/stairs.JPG" alt="階段">
-  
-  <figcaption>
-    
-    階段
-    
-  </figcaption>
-  
-</figure>
-
-
-<p>また上まで登ると湯涌稲荷神社があります. 鳥居も3つ立ってます.</p>
-
-<figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/torii.JPG" alt="湯涌稲荷神社">
-  
-  <figcaption>
-    
-    湯涌稲荷神社
-    
-  </figcaption>
-  
-</figure>
-
-
-<p>さて階段の下には白鷺の湯があります. 雨で結構濡れてしまったので一回入ってきました.<br />
-中には花咲くいろはのポスターや, ラッピングされた自動販売機とかおいてありました.<br />
-入口には岸田メル先生がサインされた自動販売機もおいてありました.<br />
-浴場はありがちな銭湯という感じで, 石鹸などは販売しているのみでした.</p>
-
-<p><figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/shirasagi.JPG" alt="白鷺の湯">
-  
-  <figcaption>
-    
-    白鷺の湯
-    
-  </figcaption>
-  
-</figure>
-
-<figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/vending.JPG" alt="自動販売機">
-  
-  <figcaption>
-    
-    自動販売機
-    
-  </figcaption>
-  
-</figure>
-</p>
-
-<h3 id="周辺散策">周辺散策</h3>
-
-<p>白鷺の湯でのんびりしていたら幸いにも雨が上がりました.<br />
-雨が降っていて行くのを諦めた池の方に行くことにしました. ただ林の中の行けって感じで虫が非常に寄ってきました. ハエが10匹くらいとまったり….<br />
-白雲楼ホテルがあったときはここからその姿が見えたのでしょうか?</p>
-
-<figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/lake.JPG" alt="池">
-  
-  <figcaption>
-    
-    池
-    
-  </figcaption>
-  
-</figure>
-
-
-<p>また白鷺の湯から少し離れると, 秀峰閣ホテルが見れます. 小奇麗な感じでここら変だと目立ちますね.</p>
-
-<figure>
-  <img src="https://blog.browniealice.net/images/visit-kanazawa-2day/shuhokaku.JPG" alt="秀峰閣">
-  
-  <figcaption>
-    
-    秀峰閣
-    
-  </figcaption>
-  
-</figure>
-
-
-<p>時間がなかったのでこの辺で金沢に戻りました. 湯涌温泉観光協会とか行きたかったです.<br />
-湯涌温泉自体は地方の温泉街という感じでした. 特に目立った観光名所もありませんでしたね.<br />
-こんな感じで2日目は終わりました.</p>
+<ol>
+<li id="fn:1">2017年より前の情報が大半でC++17機能が使えないので仕方ないと思いますが.
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
 </div>
 
   <footer class="article-footer">
 
     <aside class="share">
-  <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f&title=%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
-  <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f&text=%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f&t=%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-  <a href="https://plus.google.com/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-  <a href="http://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f&title=%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fa fa-get-pocket" aria-hidden="true"></i></a>
-  <a href="http://line.me/R/msg/text/?%e9%87%91%e6%b2%a2%e8%81%96%e5%9c%b0%e5%b7%a1%e7%a4%bc2%e6%97%a5%e7%9b%ae https%3a%2f%2fblog.browniealice.net%2fpost%2fvisit-kanazawa-2day%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow">LINE</a>
+  <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f&title=std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f&text=std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f&t=std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://plus.google.com/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+  <a href="http://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f&title=std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fa fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="http://line.me/R/msg/text/?std%3a%3atuple%e3%81%ae%e5%85%a8%e8%a6%81%e7%b4%a0%e3%81%ae%e8%b5%b0%e6%9f%bb https%3a%2f%2fblog.browniealice.net%2fpost%2ftuple_iterate%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow">LINE</a>
 </aside>
 
 
@@ -337,7 +235,7 @@
             
             <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.browniealice.net/post/" itemprop="url"><span itemprop="title">POST</span></a></li>
             
-            <li class="active">金沢聖地巡礼2日目</li>
+            <li class="active">std::tupleの全要素の走査</li>
           </ol>
         </nav>
       </div>
@@ -353,26 +251,13 @@
       <div>
         <ul class="terms">
           
-          <li><a href="https://blog.browniealice.net/categories/travel/">travel</a></li>
+          <li><a href="https://blog.browniealice.net/categories/technote/">TechNote</a></li>
           
         </ul>
       </div>
     </section>
     
     
-    
-    <section class="footer">
-      <header>
-        <a href="https://blog.browniealice.net/series/">SERIES</a>
-      </header>
-      <div>
-        <ul class="terms">
-          
-          <li><a href="https://blog.browniealice.net/series/%E9%87%91%E6%B2%A2%E8%81%96%E5%9C%B0%E5%B7%A1%E7%A4%BC/">金沢聖地巡礼</a></li>
-          
-        </ul>
-      </div>
-    </section>
     
     
     
@@ -383,7 +268,7 @@
       <div>
         <ul class="terms">
           
-          <li><a href="https://blog.browniealice.net/tags/pilgrimage/">pilgrimage</a></li>
+          <li><a href="https://blog.browniealice.net/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
           
         </ul>
       </div>
@@ -401,14 +286,14 @@
         <div class="mcol c6">
           <header>Previous Article</header>
           <article class="lism">
-  <a href="https://blog.browniealice.net/post/wiki_renewal/">
-    <div class="thumb thumb-236b424b8f689db5bbba340e66b53f1c"></div>
+  <a href="https://blog.browniealice.net/post/arch_esp32_arduino_ide/">
+    <div class="thumb thumb-a955fd2306ee228d5d022fd07d759b31"></div>
 
     <div class="inner">
-      <div class="title">wikiのデザインを変えた</div>
+      <div class="title">Arch LinuxでESP32の環境を構築(Arduino IDE)</div>
 
       <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-08-25T12:31:46JST">Aug 25, 2017</time></li>
+        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-09-02T03:51:18JST">Sep 2, 2018</time></li>
         <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
         
       </ul>
@@ -419,27 +304,6 @@
 
         </div>
         
-        
-        <div class="mcol c6">
-          <header>Next Article</header>
-          <article class="lism">
-  <a href="https://blog.browniealice.net/post/visit-kanazawa-3day/">
-    <div class="thumb thumb-cf49c28371ec07ddf2b3f0accac0c7ea"></div>
-
-    <div class="inner">
-      <div class="title">金沢聖地巡礼3日目</div>
-
-      <ul class="facts sm">
-        <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-08-26T20:04:23JST">Aug 26, 2017</time></li>
-        <li><i class="fa fa-bookmark" aria-hidden="true"></i>POST</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-        </div>
         
       </div>
     </div>
