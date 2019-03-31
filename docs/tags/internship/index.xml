@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Internship on Alice in the Machine - Blog</title>
+    <link>https://blog.browniealice.net/tags/internship/</link>
+    <description>Recent content in Internship on Alice in the Machine - Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;&lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;&lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;&lt;/a&gt;&lt;br&gt;このサイトのテキストは原則として &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt; の下に提供されています.</copyright>
+    <lastBuildDate>Sun, 31 Mar 2019 21:28:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.browniealice.net/tags/internship/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大企業の技術系インターンシップに参加した</title>
+      <link>https://blog.browniealice.net/post/internship2019winter/</link>
+      <pubDate>Sun, 31 Mar 2019 21:28:47 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/internship2019winter/</guid>
+      <description>春休みに3週間ほどインターンシップに参加してきました. いろいろと思うところがあったので, 参加した感想を書いていきます. 経緯 近年ではインターン</description>
+    </item>
+    
+  </channel>
+</rss>

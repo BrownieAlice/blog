@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.browniealice.net/post/internship2019winter/</loc>
+    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.browniealice.net/post/kougyou/</loc>
     <lastmod>2019-03-31T20:32:56+09:00</lastmod>
   </url>
@@ -104,7 +109,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/</loc>
-    <lastmod>2019-03-31T20:32:56+09:00</lastmod>
+    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -121,7 +126,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/categories/diary/</loc>
-    <lastmod>2019-03-31T20:32:56+09:00</lastmod>
+    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -134,6 +139,12 @@
   <url>
     <loc>https://blog.browniealice.net/tags/hugo/</loc>
     <lastmod>2017-08-25T12:31:46+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.browniealice.net/tags/internship/</loc>
+    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,7 +168,7 @@
   
   <url>
     <loc>https://blog.browniealice.net/post/</loc>
-    <lastmod>2019-03-31T20:32:56+09:00</lastmod>
+    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
     <priority>0</priority>
   </url>
   
