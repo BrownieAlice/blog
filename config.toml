@@ -6,7 +6,32 @@ publishDir = "docs"
 disqusShortname = "alice-in-the-machine-blog"
 hasCJKLanguage = true
 pygmentsCodeFences = true
-copyright = "Copyright &copy; 2017-2019, BrownieAlice.<br><a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='クリエイティブ・コモンズ・ライセンス' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/4.0/80x15.png' /></a><br>このサイトのテキストは原則として <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a> の下に提供されています."
+copyright = """
+Copyright &copy; 2017-2019, BrownieAlice.<br>
+<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>
+<img alt='クリエイティブ・コモンズ・ライセンス' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/4.0/80x15.png' />
+</a><br>
+このサイトのテキストは原則として
+<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a>
+の下に提供されています."""
+
+[params]
+  description = "エンジニアを目指したいへっぽこ学生の技術系ブログ."
+  dateformat = "2006-01-02"
+
+[params.author]
+  thumbnail = "images/author.png"
+  name = "BrownieAlice"
+  description = """
+  <div align="center">
+  工業大学に通う大学院生. <br>
+  ロボコンに参加したことがあったり? <br>
+  <a href="https://blog.browniealice.net">Blog</a> /
+  <a href="https://wiki.browniealice.net">wiki</a> /
+  <a href="https://github.com/BrownieAlice/blog.git">Repository</a>
+  </div>"""
+  #twitter = "https://twitter.com/BrownieAlice"
+  github = "https://github.com/BrownieAlice"
 
 [taxonomies]
 tag = "tags"
