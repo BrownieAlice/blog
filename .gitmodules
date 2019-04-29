@@ -1,3 +1,3 @@
-[submodule "themes/hugo_theme_robust"]
+[submodule "hugo_theme_rubust-myfork"]
 	path = themes/hugo_theme_robust
-	url = https://github.com/dim0627/hugo_theme_robust.git
+	url = git@github.com:BrownieAlice/hugo_theme_robust.git
