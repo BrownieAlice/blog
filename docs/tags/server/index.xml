@@ -1,40 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>server on Alice in the Machine - Blog</title>
-    <link>https://blog.browniealice.net/tags/server/</link>
-    <description>Recent content in server on Alice in the Machine - Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-JP</language>
-    <copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>server on Alice in the Machine - Blog</title><link>https://blog.browniealice.net/tags/server/</link><description>Recent content in server on Alice in the Machine - Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;
 &lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;
 &lt;/a&gt;&lt;br&gt;
 このサイトのテキストは原則として
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt;
-の下に提供されています.</copyright>
-    <lastBuildDate>Sun, 10 Dec 2017 17:42:44 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.browniealice.net/tags/server/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>メールサーバを運用し始めた</title>
-      <link>https://blog.browniealice.net/post/mail_server/</link>
-      <pubDate>Sun, 10 Dec 2017 17:42:44 +0900</pubDate>
-      
-      <guid>https://blog.browniealice.net/post/mail_server/</guid>
-      <description>メールサーバを借りた Redmine/Nextcloud/Blog/wikiなどを運用し始めたので今度はメールサーバを運用しようと思いました.</description>
-    </item>
-    
-    <item>
-      <title>サーバーを構築した</title>
-      <link>https://blog.browniealice.net/post/build_server/</link>
-      <pubDate>Fri, 10 Nov 2017 09:05:53 +0900</pubDate>
-      
-      <guid>https://blog.browniealice.net/post/build_server/</guid>
-      <description>VPSを借りた 今までBlogとwikiはGitHub Pagesを用いて公開していましたが, VPSを借りたのでそっちに移行しました. サーバー借</description>
-    </item>
-    
-  </channel>
-</rss>
+の下に提供されています.</copyright><lastBuildDate>Sun, 10 Dec 2017 17:42:44 +0900</lastBuildDate><atom:link href="https://blog.browniealice.net/tags/server/index.xml" rel="self" type="application/rss+xml"/><item><title>メールサーバを運用し始めた</title><link>https://blog.browniealice.net/post/mail_server/</link><pubDate>Sun, 10 Dec 2017 17:42:44 +0900</pubDate><guid>https://blog.browniealice.net/post/mail_server/</guid><description>メールサーバを借りた Redmine/Nextcloud/Blog/wikiなどを運用し始めたので今度はメールサーバを運用しようと思いました.</description></item><item><title>サーバーを構築した</title><link>https://blog.browniealice.net/post/build_server/</link><pubDate>Fri, 10 Nov 2017 09:05:53 +0900</pubDate><guid>https://blog.browniealice.net/post/build_server/</guid><description>VPSを借りた 今までBlogとwikiはGitHub Pagesを用いて公開していましたが, VPSを借りたのでそっちに移行しました. サーバー借</description></item></channel></rss>

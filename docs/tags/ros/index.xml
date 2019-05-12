@@ -1,49 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ROS on Alice in the Machine - Blog</title>
-    <link>https://blog.browniealice.net/tags/ros/</link>
-    <description>Recent content in ROS on Alice in the Machine - Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-JP</language>
-    <copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ROS on Alice in the Machine - Blog</title><link>https://blog.browniealice.net/tags/ros/</link><description>Recent content in ROS on Alice in the Machine - Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;
 &lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;
 &lt;/a&gt;&lt;br&gt;
 このサイトのテキストは原則として
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt;
-の下に提供されています.</copyright>
-    <lastBuildDate>Mon, 30 Apr 2018 21:48:13 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.browniealice.net/tags/ros/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Arch LinuxでROS Lunarを使う</title>
-      <link>https://blog.browniealice.net/post/ros-lunar_on_arch/</link>
-      <pubDate>Mon, 30 Apr 2018 21:48:13 +0900</pubDate>
-      
-      <guid>https://blog.browniealice.net/post/ros-lunar_on_arch/</guid>
-      <description>経緯 ロボット界隈では相当有名で, 最近ではaiboでも使われていることで話題になっているROS. 現在の最新版であるROS Lunarが公式に対応</description>
-    </item>
-    
-    <item>
-      <title>rvizとquaternion</title>
-      <link>https://blog.browniealice.net/post/rviz_invalid_quaternion/</link>
-      <pubDate>Tue, 02 Jan 2018 00:09:13 +0900</pubDate>
-      
-      <guid>https://blog.browniealice.net/post/rviz_invalid_quaternion/</guid>
-      <description>前までやってたとおりにrviz上でvisualization_msgsのMarkerを表示させようとしたら表示されない. よくよく見てみると Contains</description>
-    </item>
-    
-    <item>
-      <title>URG使い方</title>
-      <link>https://blog.browniealice.net/post/how_to_use_urg/</link>
-      <pubDate>Mon, 01 Jan 2018 21:25:44 +0900</pubDate>
-      
-      <guid>https://blog.browniealice.net/post/how_to_use_urg/</guid>
-      <description>北陽電機が発売している測域センサ(URG)をROSのurg_nodeを利用して使う方法について記述する. 動作環境はUbuntu 16.04 LTS. 各種解説 URG</description>
-    </item>
-    
-  </channel>
-</rss>
+の下に提供されています.</copyright><lastBuildDate>Mon, 30 Apr 2018 21:48:13 +0900</lastBuildDate><atom:link href="https://blog.browniealice.net/tags/ros/index.xml" rel="self" type="application/rss+xml"/><item><title>Arch LinuxでROS Lunarを使う</title><link>https://blog.browniealice.net/post/ros-lunar_on_arch/</link><pubDate>Mon, 30 Apr 2018 21:48:13 +0900</pubDate><guid>https://blog.browniealice.net/post/ros-lunar_on_arch/</guid><description>経緯 ロボット界隈では相当有名で, 最近ではaiboでも使われていることで話題になっているROS. 現在の最新版であるROS Lunarが公式に対応</description></item><item><title>rvizとquaternion</title><link>https://blog.browniealice.net/post/rviz_invalid_quaternion/</link><pubDate>Tue, 02 Jan 2018 00:09:13 +0900</pubDate><guid>https://blog.browniealice.net/post/rviz_invalid_quaternion/</guid><description>前までやってたとおりにrviz上でvisualization_msgsのMarkerを表示させようとしたら表示されない. よくよく見てみると Contains</description></item><item><title>URG使い方</title><link>https://blog.browniealice.net/post/how_to_use_urg/</link><pubDate>Mon, 01 Jan 2018 21:25:44 +0900</pubDate><guid>https://blog.browniealice.net/post/how_to_use_urg/</guid><description>北陽電機が発売している測域センサ(URG)をROSのurg_nodeを利用して使う方法について記述する. 動作環境はUbuntu 16.04 LTS. 各種解説 URG</description></item></channel></rss>
