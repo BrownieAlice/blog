@@ -37,3 +37,6 @@ Copyright &copy; 2017-2019, BrownieAlice.<br>
 tag = "tags"
 category = "categories"
 series = "series"
+
+[markup.goldmark.renderer]
+  unsafe = true
