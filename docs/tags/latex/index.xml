@@ -1,7 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>latex on Alice in the Machine - Blog</title><link>https://blog.browniealice.net/tags/latex/</link><description>Recent content in latex on Alice in the Machine - Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on Alice in the Machine - Blog</title>
+    <link>https://blog.browniealice.net/tags/latex/</link>
+    <description>Recent content in latex on Alice in the Machine - Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;
 &lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;
 &lt;/a&gt;&lt;br&gt;
 このサイトのテキストは原則として
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt;
-の下に提供されています.</copyright><lastBuildDate>Sun, 14 Jan 2018 00:50:09 +0900</lastBuildDate><atom:link href="https://blog.browniealice.net/tags/latex/index.xml" rel="self" type="application/rss+xml"/><item><title>LaTeXでの転置行列の表記</title><link>https://blog.browniealice.net/post/latex_transpose/</link><pubDate>Sun, 14 Jan 2018 00:50:09 +0900</pubDate><guid>https://blog.browniealice.net/post/latex_transpose/</guid><description>転置記号の候補 $\rm \LaTeX$で転置行列を書こうとするときに, 右上に書く転置記号をどう記載するかで悩んだのでメモしておく. $A$行列の転置行</description></item></channel></rss>
+の下に提供されています.</copyright>
+    <lastBuildDate>Sun, 14 Jan 2018 00:50:09 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.browniealice.net/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LaTeXでの転置行列の表記</title>
+      <link>https://blog.browniealice.net/post/latex_transpose/</link>
+      <pubDate>Sun, 14 Jan 2018 00:50:09 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/latex_transpose/</guid>
+      <description>転置記号の候補 $\rm \LaTeX$で転置行列を書こうとするときに, 右上に書く転置記号をどう記載するかで悩んだのでメモしておく. $A$行列の転置行</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,7 +1,211 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Alice in the Machine - Blog</title><link>https://blog.browniealice.net/post/</link><description>Recent content in Posts on Alice in the Machine - Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Alice in the Machine - Blog</title>
+    <link>https://blog.browniealice.net/post/</link>
+    <description>Recent content in Posts on Alice in the Machine - Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;
 &lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;
 &lt;/a&gt;&lt;br&gt;
 このサイトのテキストは原則として
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt;
-の下に提供されています.</copyright><lastBuildDate>Sun, 31 Mar 2019 21:28:47 +0900</lastBuildDate><atom:link href="https://blog.browniealice.net/post/index.xml" rel="self" type="application/rss+xml"/><item><title>大企業の技術系インターンシップに参加した</title><link>https://blog.browniealice.net/post/internship2019winter/</link><pubDate>Sun, 31 Mar 2019 21:28:47 +0900</pubDate><guid>https://blog.browniealice.net/post/internship2019winter/</guid><description>春休みに3週間ほどインターンシップに参加してきました. いろいろと思うところがあったので, 参加した感想を書いていきます. 経緯 近年ではインターン</description></item><item><title>工業の2文字の真実</title><link>https://blog.browniealice.net/post/kougyou/</link><pubDate>Sun, 31 Mar 2019 20:32:56 +0900</pubDate><guid>https://blog.browniealice.net/post/kougyou/</guid><description>ヘッダ画像は2018年7月16日NHK総合テレビ放送の「やっぱり彼女は強かった！～NHK学生ロボコン2018～」より引用. もう2年弱も前の話</description></item><item><title>構造化束縛分かってなかった</title><link>https://blog.browniealice.net/post/i_do_not_know_structured_bindings/</link><pubDate>Fri, 04 Jan 2019 09:46:46 +0900</pubDate><guid>https://blog.browniealice.net/post/i_do_not_know_structured_bindings/</guid><description>C++初心者なので, 誤りなどがあるかもしれません&amp;gt;&amp;lt;; 構造化束縛 C++17には構造化束縛(Structured bindings)</description></item><item><title>std::tupleの全要素の走査</title><link>https://blog.browniealice.net/post/tuple_iterate/</link><pubDate>Sat, 29 Dec 2018 04:24:53 +0900</pubDate><guid>https://blog.browniealice.net/post/tuple_iterate/</guid><description>C++には std::tuple というタプル型が存在します. タプル型の全要素についてある処理を行いたい場合に, これといったやり方がないように思えます. そこで std::tuple の</description></item><item><title>Arch LinuxでESP32の環境を構築(Arduino IDE)</title><link>https://blog.browniealice.net/post/arch_esp32_arduino_ide/</link><pubDate>Sun, 02 Sep 2018 03:51:18 +0900</pubDate><guid>https://blog.browniealice.net/post/arch_esp32_arduino_ide/</guid><description>ESP32とは ESP32はWifiモジュールとBluetoothモジュールがついてデュアルコアなIoTマイコンです. 秋月電子でもESP32の</description></item><item><title>Arch LinuxでROS Lunarを使う</title><link>https://blog.browniealice.net/post/ros-lunar_on_arch/</link><pubDate>Mon, 30 Apr 2018 21:48:13 +0900</pubDate><guid>https://blog.browniealice.net/post/ros-lunar_on_arch/</guid><description>経緯 ロボット界隈では相当有名で, 最近ではaiboでも使われていることで話題になっているROS. 現在の最新版であるROS Lunarが公式に対応</description></item><item><title>LaTeXでの転置行列の表記</title><link>https://blog.browniealice.net/post/latex_transpose/</link><pubDate>Sun, 14 Jan 2018 00:50:09 +0900</pubDate><guid>https://blog.browniealice.net/post/latex_transpose/</guid><description>転置記号の候補 $\rm \LaTeX$で転置行列を書こうとするときに, 右上に書く転置記号をどう記載するかで悩んだのでメモしておく. $A$行列の転置行</description></item><item><title>rvizとquaternion</title><link>https://blog.browniealice.net/post/rviz_invalid_quaternion/</link><pubDate>Tue, 02 Jan 2018 00:09:13 +0900</pubDate><guid>https://blog.browniealice.net/post/rviz_invalid_quaternion/</guid><description>前までやってたとおりにrviz上でvisualization_msgsのMarkerを表示させようとしたら表示されない. よくよく見てみると Contains</description></item><item><title>URG使い方</title><link>https://blog.browniealice.net/post/how_to_use_urg/</link><pubDate>Mon, 01 Jan 2018 21:25:44 +0900</pubDate><guid>https://blog.browniealice.net/post/how_to_use_urg/</guid><description>北陽電機が発売している測域センサ(URG)をROSのurg_nodeを利用して使う方法について記述する. 動作環境はUbuntu 16.04 LTS. 各種解説 URG</description></item><item><title>メールサーバを運用し始めた</title><link>https://blog.browniealice.net/post/mail_server/</link><pubDate>Sun, 10 Dec 2017 17:42:44 +0900</pubDate><guid>https://blog.browniealice.net/post/mail_server/</guid><description>メールサーバを借りた Redmine/Nextcloud/Blog/wikiなどを運用し始めたので今度はメールサーバを運用しようと思いました.</description></item><item><title>サーバーを構築した</title><link>https://blog.browniealice.net/post/build_server/</link><pubDate>Fri, 10 Nov 2017 09:05:53 +0900</pubDate><guid>https://blog.browniealice.net/post/build_server/</guid><description>VPSを借りた 今までBlogとwikiはGitHub Pagesを用いて公開していましたが, VPSを借りたのでそっちに移行しました. サーバー借</description></item><item><title>研究室所属した</title><link>https://blog.browniealice.net/post/laboratory/</link><pubDate>Sun, 01 Oct 2017 22:56:43 +0900</pubDate><guid>https://blog.browniealice.net/post/laboratory/</guid><description>ラボに入った 9月末に研究室所属しました. 色々あって色々揉めたんですけど, 最終的に他の人より早く第一志望の研究室に行くことができました. 研究テ</description></item><item><title>山梨サークル合宿</title><link>https://blog.browniealice.net/post/yamanashi_camp/</link><pubDate>Sun, 01 Oct 2017 01:11:10 +0900</pubDate><guid>https://blog.browniealice.net/post/yamanashi_camp/</guid><description>サークル合宿に参加した 所属しているサークルの毎年の恒例行事である夏合宿に参加してきました. 9&amp;frasl;6(水)-9&amp;frasl;8(金)</description></item><item><title>2017ABUロボコンに参加した</title><link>https://blog.browniealice.net/post/2017aburobocon/</link><pubDate>Tue, 05 Sep 2017 00:03:22 +0900</pubDate><guid>https://blog.browniealice.net/post/2017aburobocon/</guid><description>ABUロボコンとは Asia-Pacific Broadcasting Unionが主催するロボコンです. ルールはNHK学生ロボコンとほぼ同じです. NHK学生ロボコンは日本予選という立ち位置</description></item><item><title>金沢聖地巡礼3日目</title><link>https://blog.browniealice.net/post/visit-kanazawa-3day/</link><pubDate>Sat, 26 Aug 2017 20:04:23 +0900</pubDate><guid>https://blog.browniealice.net/post/visit-kanazawa-3day/</guid><description>行程 金沢聖地巡礼3日目です. この日も午後1時に帰る必要があったので, 午前だけ巡礼をしました. ルートはこんな感じです. 北鉄金沢バス 金沢駅東口0</description></item><item><title>金沢聖地巡礼2日目</title><link>https://blog.browniealice.net/post/visit-kanazawa-2day/</link><pubDate>Fri, 25 Aug 2017 17:30:04 +0900</pubDate><guid>https://blog.browniealice.net/post/visit-kanazawa-2day/</guid><description>行程 この日は午後から別の用事があったので, 午前だけ聖地巡礼しました. ただ実は最近あった土砂崩れによって8/8から湯涌温泉に行くバスが途中で止</description></item><item><title>wikiのデザインを変えた</title><link>https://blog.browniealice.net/post/wiki_renewal/</link><pubDate>Fri, 25 Aug 2017 12:31:46 +0900</pubDate><guid>https://blog.browniealice.net/post/wiki_renewal/</guid><description>wikiのデザインを変えました. テーマはdocdockを使いました. 名前の通りドキュメントをまとめるのに使いやすそうなwiki. ようやくwi</description></item><item><title>金沢聖地巡礼1日目</title><link>https://blog.browniealice.net/post/visit-kanazawa-1day/</link><pubDate>Thu, 24 Aug 2017 00:15:15 +0900</pubDate><guid>https://blog.browniealice.net/post/visit-kanazawa-1day/</guid><description>金沢聖地巡礼 諸事情により金沢へ行かなければならなかったので, ついでにと思い 花咲くいろは/true tears/Angel Beats! の聖地巡礼をしてきました. 日程は8/17</description></item><item><title>Disqusを導入した</title><link>https://blog.browniealice.net/post/disqus_introduce/</link><pubDate>Wed, 16 Aug 2017 08:35:22 +0900</pubDate><guid>https://blog.browniealice.net/post/disqus_introduce/</guid><description>ヘッダ画像は Disqus の Logo より引用. Disqusとは Disqus はブログのコメントシステムです. このブログはWebサービス型のブログは用いていないので, 当たり</description></item><item><title>wikiを作成した</title><link>https://blog.browniealice.net/post/create_wiki/</link><pubDate>Wed, 16 Aug 2017 00:18:07 +0900</pubDate><guid>https://blog.browniealice.net/post/create_wiki/</guid><description>wikiについて Blogを作ったはいいものの, 技術的なことをまとめるのはBlogではなくwikiのほうがいいと思ったのでwikiを作りました</description></item><item><title>初投稿</title><link>https://blog.browniealice.net/post/first_post/</link><pubDate>Mon, 14 Aug 2017 05:04:22 +0900</pubDate><guid>https://blog.browniealice.net/post/first_post/</guid><description>Blogを始めた 初投稿です. BrownieAliceと申します. 昔からBlogを始めてはすぐ辞めてを繰り返していたのですが, そろそろきちんと</description></item></channel></rss>
+の下に提供されています.</copyright>
+    <lastBuildDate>Sun, 31 Mar 2019 21:28:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.browniealice.net/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大企業の技術系インターンシップに参加した</title>
+      <link>https://blog.browniealice.net/post/internship2019winter/</link>
+      <pubDate>Sun, 31 Mar 2019 21:28:47 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/internship2019winter/</guid>
+      <description>春休みに3週間ほどインターンシップに参加してきました. いろいろと思うところがあったので, 参加した感想を書いていきます. 経緯 近年ではインターン</description>
+    </item>
+    
+    <item>
+      <title>工業の2文字の真実</title>
+      <link>https://blog.browniealice.net/post/kougyou/</link>
+      <pubDate>Sun, 31 Mar 2019 20:32:56 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/kougyou/</guid>
+      <description>ヘッダ画像は2018年7月16日NHK総合テレビ放送の「やっぱり彼女は強かった！～NHK学生ロボコン2018～」より引用. もう2年弱も前の話</description>
+    </item>
+    
+    <item>
+      <title>構造化束縛分かってなかった</title>
+      <link>https://blog.browniealice.net/post/i_do_not_know_structured_bindings/</link>
+      <pubDate>Fri, 04 Jan 2019 09:46:46 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/i_do_not_know_structured_bindings/</guid>
+      <description>C++初心者なので, 誤りなどがあるかもしれません&amp;gt;&amp;lt;; 構造化束縛 C++17には構造化束縛(Structured bindings)</description>
+    </item>
+    
+    <item>
+      <title>std::tupleの全要素の走査</title>
+      <link>https://blog.browniealice.net/post/tuple_iterate/</link>
+      <pubDate>Sat, 29 Dec 2018 04:24:53 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/tuple_iterate/</guid>
+      <description>C++には std::tuple というタプル型が存在します. タプル型の全要素についてある処理を行いたい場合に, これといったやり方がないように思えます. そこで std::tuple の</description>
+    </item>
+    
+    <item>
+      <title>Arch LinuxでESP32の環境を構築(Arduino IDE)</title>
+      <link>https://blog.browniealice.net/post/arch_esp32_arduino_ide/</link>
+      <pubDate>Sun, 02 Sep 2018 03:51:18 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/arch_esp32_arduino_ide/</guid>
+      <description>ESP32とは ESP32はWifiモジュールとBluetoothモジュールがついてデュアルコアなIoTマイコンです. 秋月電子でもESP32の</description>
+    </item>
+    
+    <item>
+      <title>Arch LinuxでROS Lunarを使う</title>
+      <link>https://blog.browniealice.net/post/ros-lunar_on_arch/</link>
+      <pubDate>Mon, 30 Apr 2018 21:48:13 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/ros-lunar_on_arch/</guid>
+      <description>経緯 ロボット界隈では相当有名で, 最近ではaiboでも使われていることで話題になっているROS. 現在の最新版であるROS Lunarが公式に対応</description>
+    </item>
+    
+    <item>
+      <title>LaTeXでの転置行列の表記</title>
+      <link>https://blog.browniealice.net/post/latex_transpose/</link>
+      <pubDate>Sun, 14 Jan 2018 00:50:09 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/latex_transpose/</guid>
+      <description>転置記号の候補 $\rm \LaTeX$で転置行列を書こうとするときに, 右上に書く転置記号をどう記載するかで悩んだのでメモしておく. $A$行列の転置行</description>
+    </item>
+    
+    <item>
+      <title>rvizとquaternion</title>
+      <link>https://blog.browniealice.net/post/rviz_invalid_quaternion/</link>
+      <pubDate>Tue, 02 Jan 2018 00:09:13 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/rviz_invalid_quaternion/</guid>
+      <description>前までやってたとおりにrviz上でvisualization_msgsのMarkerを表示させようとしたら表示されない. よくよく見てみると Contains</description>
+    </item>
+    
+    <item>
+      <title>URG使い方</title>
+      <link>https://blog.browniealice.net/post/how_to_use_urg/</link>
+      <pubDate>Mon, 01 Jan 2018 21:25:44 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/how_to_use_urg/</guid>
+      <description>北陽電機が発売している測域センサ(URG)をROSのurg_nodeを利用して使う方法について記述する. 動作環境はUbuntu 16.04 LTS. 各種解説 URG</description>
+    </item>
+    
+    <item>
+      <title>メールサーバを運用し始めた</title>
+      <link>https://blog.browniealice.net/post/mail_server/</link>
+      <pubDate>Sun, 10 Dec 2017 17:42:44 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/mail_server/</guid>
+      <description>メールサーバを借りた Redmine/Nextcloud/Blog/wikiなどを運用し始めたので今度はメールサーバを運用しようと思いました.</description>
+    </item>
+    
+    <item>
+      <title>サーバーを構築した</title>
+      <link>https://blog.browniealice.net/post/build_server/</link>
+      <pubDate>Fri, 10 Nov 2017 09:05:53 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/build_server/</guid>
+      <description>VPSを借りた 今までBlogとwikiはGitHub Pagesを用いて公開していましたが, VPSを借りたのでそっちに移行しました. サーバー借</description>
+    </item>
+    
+    <item>
+      <title>研究室所属した</title>
+      <link>https://blog.browniealice.net/post/laboratory/</link>
+      <pubDate>Sun, 01 Oct 2017 22:56:43 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/laboratory/</guid>
+      <description>ラボに入った 9月末に研究室所属しました. 色々あって色々揉めたんですけど, 最終的に他の人より早く第一志望の研究室に行くことができました. 研究テ</description>
+    </item>
+    
+    <item>
+      <title>山梨サークル合宿</title>
+      <link>https://blog.browniealice.net/post/yamanashi_camp/</link>
+      <pubDate>Sun, 01 Oct 2017 01:11:10 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/yamanashi_camp/</guid>
+      <description>サークル合宿に参加した 所属しているサークルの毎年の恒例行事である夏合宿に参加してきました. 9/6(水)-9/8(金)にかけて河口湖に行ってき</description>
+    </item>
+    
+    <item>
+      <title>2017ABUロボコンに参加した</title>
+      <link>https://blog.browniealice.net/post/2017aburobocon/</link>
+      <pubDate>Tue, 05 Sep 2017 00:03:22 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/2017aburobocon/</guid>
+      <description>ABUロボコンとは Asia-Pacific Broadcasting Unionが主催するロボコンです. ルールはNHK学生ロボコンとほぼ同じです. NHK学生ロボコンは日本予選という立ち位置</description>
+    </item>
+    
+    <item>
+      <title>金沢聖地巡礼3日目</title>
+      <link>https://blog.browniealice.net/post/visit-kanazawa-3day/</link>
+      <pubDate>Sat, 26 Aug 2017 20:04:23 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/visit-kanazawa-3day/</guid>
+      <description>行程 金沢聖地巡礼3日目です. この日も午後1時に帰る必要があったので, 午前だけ巡礼をしました. ルートはこんな感じです. 北鉄金沢バス 金沢駅東口0</description>
+    </item>
+    
+    <item>
+      <title>金沢聖地巡礼2日目</title>
+      <link>https://blog.browniealice.net/post/visit-kanazawa-2day/</link>
+      <pubDate>Fri, 25 Aug 2017 17:30:04 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/visit-kanazawa-2day/</guid>
+      <description>行程 この日は午後から別の用事があったので, 午前だけ聖地巡礼しました. ただ実は最近あった土砂崩れによって8/8から湯涌温泉に行くバスが途中で止</description>
+    </item>
+    
+    <item>
+      <title>wikiのデザインを変えた</title>
+      <link>https://blog.browniealice.net/post/wiki_renewal/</link>
+      <pubDate>Fri, 25 Aug 2017 12:31:46 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/wiki_renewal/</guid>
+      <description>wikiのデザインを変えました. テーマはdocdockを使いました. 名前の通りドキュメントをまとめるのに使いやすそうなwiki. ようやくwi</description>
+    </item>
+    
+    <item>
+      <title>金沢聖地巡礼1日目</title>
+      <link>https://blog.browniealice.net/post/visit-kanazawa-1day/</link>
+      <pubDate>Thu, 24 Aug 2017 00:15:15 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/visit-kanazawa-1day/</guid>
+      <description>金沢聖地巡礼 諸事情により金沢へ行かなければならなかったので, ついでにと思い 花咲くいろは/true tears/Angel Beats! の聖地巡礼をしてきました. 日程は8/17</description>
+    </item>
+    
+    <item>
+      <title>Disqusを導入した</title>
+      <link>https://blog.browniealice.net/post/disqus_introduce/</link>
+      <pubDate>Wed, 16 Aug 2017 08:35:22 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/disqus_introduce/</guid>
+      <description>ヘッダ画像は Disqus の Logo より引用. Disqusとは Disqus はブログのコメントシステムです. このブログはWebサービス型のブログは用いていないので, 当たり</description>
+    </item>
+    
+    <item>
+      <title>wikiを作成した</title>
+      <link>https://blog.browniealice.net/post/create_wiki/</link>
+      <pubDate>Wed, 16 Aug 2017 00:18:07 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/create_wiki/</guid>
+      <description>wikiについて Blogを作ったはいいものの, 技術的なことをまとめるのはBlogではなくwikiのほうがいいと思ったのでwikiを作りました</description>
+    </item>
+    
+    <item>
+      <title>初投稿</title>
+      <link>https://blog.browniealice.net/post/first_post/</link>
+      <pubDate>Mon, 14 Aug 2017 05:04:22 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/first_post/</guid>
+      <description>Blogを始めた 初投稿です. BrownieAliceと申します. 昔からBlogを始めてはすぐ辞めてを繰り返していたのですが, そろそろきちんと</description>
+    </item>
+    
+  </channel>
+</rss>

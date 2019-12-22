@@ -1,7 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>diary on Alice in the Machine - Blog</title><link>https://blog.browniealice.net/categories/diary/</link><description>Recent content in diary on Alice in the Machine - Blog</description><generator>Hugo -- gohugo.io</generator><language>ja-JP</language><copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>diary on Alice in the Machine - Blog</title>
+    <link>https://blog.browniealice.net/categories/diary/</link>
+    <description>Recent content in diary on Alice in the Machine - Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <copyright>Copyright &amp;copy; 2017-2019, BrownieAlice.&lt;br&gt;
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;
 &lt;img alt=&#39;クリエイティブ・コモンズ・ライセンス&#39; style=&#39;border-width:0&#39; src=&#39;https://i.creativecommons.org/l/by-sa/4.0/80x15.png&#39; /&gt;
 &lt;/a&gt;&lt;br&gt;
 このサイトのテキストは原則として
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt;
-の下に提供されています.</copyright><lastBuildDate>Sun, 31 Mar 2019 21:28:47 +0900</lastBuildDate><atom:link href="https://blog.browniealice.net/categories/diary/index.xml" rel="self" type="application/rss+xml"/><item><title>大企業の技術系インターンシップに参加した</title><link>https://blog.browniealice.net/post/internship2019winter/</link><pubDate>Sun, 31 Mar 2019 21:28:47 +0900</pubDate><guid>https://blog.browniealice.net/post/internship2019winter/</guid><description>春休みに3週間ほどインターンシップに参加してきました. いろいろと思うところがあったので, 参加した感想を書いていきます. 経緯 近年ではインターン</description></item><item><title>工業の2文字の真実</title><link>https://blog.browniealice.net/post/kougyou/</link><pubDate>Sun, 31 Mar 2019 20:32:56 +0900</pubDate><guid>https://blog.browniealice.net/post/kougyou/</guid><description>ヘッダ画像は2018年7月16日NHK総合テレビ放送の「やっぱり彼女は強かった！～NHK学生ロボコン2018～」より引用. もう2年弱も前の話</description></item><item><title>メールサーバを運用し始めた</title><link>https://blog.browniealice.net/post/mail_server/</link><pubDate>Sun, 10 Dec 2017 17:42:44 +0900</pubDate><guid>https://blog.browniealice.net/post/mail_server/</guid><description>メールサーバを借りた Redmine/Nextcloud/Blog/wikiなどを運用し始めたので今度はメールサーバを運用しようと思いました.</description></item><item><title>サーバーを構築した</title><link>https://blog.browniealice.net/post/build_server/</link><pubDate>Fri, 10 Nov 2017 09:05:53 +0900</pubDate><guid>https://blog.browniealice.net/post/build_server/</guid><description>VPSを借りた 今までBlogとwikiはGitHub Pagesを用いて公開していましたが, VPSを借りたのでそっちに移行しました. サーバー借</description></item><item><title>研究室所属した</title><link>https://blog.browniealice.net/post/laboratory/</link><pubDate>Sun, 01 Oct 2017 22:56:43 +0900</pubDate><guid>https://blog.browniealice.net/post/laboratory/</guid><description>ラボに入った 9月末に研究室所属しました. 色々あって色々揉めたんですけど, 最終的に他の人より早く第一志望の研究室に行くことができました. 研究テ</description></item><item><title>2017ABUロボコンに参加した</title><link>https://blog.browniealice.net/post/2017aburobocon/</link><pubDate>Tue, 05 Sep 2017 00:03:22 +0900</pubDate><guid>https://blog.browniealice.net/post/2017aburobocon/</guid><description>ABUロボコンとは Asia-Pacific Broadcasting Unionが主催するロボコンです. ルールはNHK学生ロボコンとほぼ同じです. NHK学生ロボコンは日本予選という立ち位置</description></item><item><title>wikiのデザインを変えた</title><link>https://blog.browniealice.net/post/wiki_renewal/</link><pubDate>Fri, 25 Aug 2017 12:31:46 +0900</pubDate><guid>https://blog.browniealice.net/post/wiki_renewal/</guid><description>wikiのデザインを変えました. テーマはdocdockを使いました. 名前の通りドキュメントをまとめるのに使いやすそうなwiki. ようやくwi</description></item><item><title>wikiを作成した</title><link>https://blog.browniealice.net/post/create_wiki/</link><pubDate>Wed, 16 Aug 2017 00:18:07 +0900</pubDate><guid>https://blog.browniealice.net/post/create_wiki/</guid><description>wikiについて Blogを作ったはいいものの, 技術的なことをまとめるのはBlogではなくwikiのほうがいいと思ったのでwikiを作りました</description></item><item><title>初投稿</title><link>https://blog.browniealice.net/post/first_post/</link><pubDate>Mon, 14 Aug 2017 05:04:22 +0900</pubDate><guid>https://blog.browniealice.net/post/first_post/</guid><description>Blogを始めた 初投稿です. BrownieAliceと申します. 昔からBlogを始めてはすぐ辞めてを繰り返していたのですが, そろそろきちんと</description></item></channel></rss>
+の下に提供されています.</copyright>
+    <lastBuildDate>Sun, 31 Mar 2019 21:28:47 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.browniealice.net/categories/diary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大企業の技術系インターンシップに参加した</title>
+      <link>https://blog.browniealice.net/post/internship2019winter/</link>
+      <pubDate>Sun, 31 Mar 2019 21:28:47 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/internship2019winter/</guid>
+      <description>春休みに3週間ほどインターンシップに参加してきました. いろいろと思うところがあったので, 参加した感想を書いていきます. 経緯 近年ではインターン</description>
+    </item>
+    
+    <item>
+      <title>工業の2文字の真実</title>
+      <link>https://blog.browniealice.net/post/kougyou/</link>
+      <pubDate>Sun, 31 Mar 2019 20:32:56 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/kougyou/</guid>
+      <description>ヘッダ画像は2018年7月16日NHK総合テレビ放送の「やっぱり彼女は強かった！～NHK学生ロボコン2018～」より引用. もう2年弱も前の話</description>
+    </item>
+    
+    <item>
+      <title>メールサーバを運用し始めた</title>
+      <link>https://blog.browniealice.net/post/mail_server/</link>
+      <pubDate>Sun, 10 Dec 2017 17:42:44 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/mail_server/</guid>
+      <description>メールサーバを借りた Redmine/Nextcloud/Blog/wikiなどを運用し始めたので今度はメールサーバを運用しようと思いました.</description>
+    </item>
+    
+    <item>
+      <title>サーバーを構築した</title>
+      <link>https://blog.browniealice.net/post/build_server/</link>
+      <pubDate>Fri, 10 Nov 2017 09:05:53 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/build_server/</guid>
+      <description>VPSを借りた 今までBlogとwikiはGitHub Pagesを用いて公開していましたが, VPSを借りたのでそっちに移行しました. サーバー借</description>
+    </item>
+    
+    <item>
+      <title>研究室所属した</title>
+      <link>https://blog.browniealice.net/post/laboratory/</link>
+      <pubDate>Sun, 01 Oct 2017 22:56:43 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/laboratory/</guid>
+      <description>ラボに入った 9月末に研究室所属しました. 色々あって色々揉めたんですけど, 最終的に他の人より早く第一志望の研究室に行くことができました. 研究テ</description>
+    </item>
+    
+    <item>
+      <title>2017ABUロボコンに参加した</title>
+      <link>https://blog.browniealice.net/post/2017aburobocon/</link>
+      <pubDate>Tue, 05 Sep 2017 00:03:22 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/2017aburobocon/</guid>
+      <description>ABUロボコンとは Asia-Pacific Broadcasting Unionが主催するロボコンです. ルールはNHK学生ロボコンとほぼ同じです. NHK学生ロボコンは日本予選という立ち位置</description>
+    </item>
+    
+    <item>
+      <title>wikiのデザインを変えた</title>
+      <link>https://blog.browniealice.net/post/wiki_renewal/</link>
+      <pubDate>Fri, 25 Aug 2017 12:31:46 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/wiki_renewal/</guid>
+      <description>wikiのデザインを変えました. テーマはdocdockを使いました. 名前の通りドキュメントをまとめるのに使いやすそうなwiki. ようやくwi</description>
+    </item>
+    
+    <item>
+      <title>wikiを作成した</title>
+      <link>https://blog.browniealice.net/post/create_wiki/</link>
+      <pubDate>Wed, 16 Aug 2017 00:18:07 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/create_wiki/</guid>
+      <description>wikiについて Blogを作ったはいいものの, 技術的なことをまとめるのはBlogではなくwikiのほうがいいと思ったのでwikiを作りました</description>
+    </item>
+    
+    <item>
+      <title>初投稿</title>
+      <link>https://blog.browniealice.net/post/first_post/</link>
+      <pubDate>Mon, 14 Aug 2017 05:04:22 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/first_post/</guid>
+      <description>Blogを始めた 初投稿です. BrownieAliceと申します. 昔からBlogを始めてはすぐ辞めてを繰り返していたのですが, そろそろきちんと</description>
+    </item>
+    
+  </channel>
+</rss>
