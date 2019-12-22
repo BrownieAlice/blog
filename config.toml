@@ -16,22 +16,22 @@ Copyright &copy; 2017-2019, BrownieAlice.<br>
 の下に提供されています."""
 
 [params]
-  description = "エンジニアを目指したいへっぽこ学生の技術系ブログ."
-  dateformat = "2006-01-02"
+description = "エンジニアを目指したいへっぽこ学生の技術系ブログ."
+dateformat = "2006-01-02"
 
 [params.author]
-  thumbnail = "images/author.png"
-  name = "BrownieAlice"
-  description = """
-  <div align="center">
-  工業大学に通う大学院生. <br>
-  ロボコンに参加したことがあったり? <br>
-  <a href="https://blog.browniealice.net">Blog</a> /
-  <a href="https://wiki.browniealice.net">wiki</a> /
-  <a href="https://github.com/BrownieAlice/blog.git">Repository</a>
-  </div>"""
-  #twitter = "https://twitter.com/BrownieAlice"
-  github = "https://github.com/BrownieAlice"
+thumbnail = "images/author.png"
+name = "BrownieAlice"
+description = """
+<div align="center">
+工業大学に通う大学院生. <br>
+ロボコンに参加したことがあったり? <br>
+<a href="https://blog.browniealice.net">Blog</a> /
+<a href="https://wiki.browniealice.net">wiki</a> /
+<a href="https://github.com/BrownieAlice/blog.git">Repository</a>
+</div>"""
+#twitter = "https://twitter.com/BrownieAlice"
+github = "https://github.com/BrownieAlice"
 
 [taxonomies]
 tag = "tags"
@@ -39,4 +39,7 @@ category = "categories"
 series = "series"
 
 [markup.goldmark.renderer]
-  unsafe = true
+unsafe = true
+
+[imaging]
+quality = 98
