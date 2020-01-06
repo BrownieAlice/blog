@@ -13,10 +13,19 @@
 このサイトのテキストは原則として
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt;
 の下に提供されています.</copyright>
-    <lastBuildDate>Sun, 31 Mar 2019 21:28:47 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 00:29:58 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.browniealice.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>server</title>
+      <link>https://blog.browniealice.net/tags/server/</link>
+      <pubDate>Tue, 07 Jan 2020 00:29:58 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/tags/server/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>internship</title>
@@ -69,15 +78,6 @@
       <pubDate>Sun, 14 Jan 2018 00:50:09 +0900</pubDate>
       
       <guid>https://blog.browniealice.net/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>server</title>
-      <link>https://blog.browniealice.net/tags/server/</link>
-      <pubDate>Sun, 10 Dec 2017 17:42:44 +0900</pubDate>
-      
-      <guid>https://blog.browniealice.net/tags/server/</guid>
       <description></description>
     </item>
     

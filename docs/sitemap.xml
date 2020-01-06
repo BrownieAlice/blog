@@ -4,12 +4,37 @@
   
   <url>
     <loc>https://blog.browniealice.net/</loc>
-    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
+    <lastmod>2020-01-07T00:29:58+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.browniealice.net/categories/</loc>
-    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
+    <lastmod>2020-01-07T00:29:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.browniealice.net/post/stuck_on_lftp/</loc>
+    <lastmod>2020-01-07T00:29:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.browniealice.net/post/</loc>
+    <lastmod>2020-01-07T00:29:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.browniealice.net/tags/server/</loc>
+    <lastmod>2020-01-07T00:29:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.browniealice.net/tags/</loc>
+    <lastmod>2020-01-07T00:29:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.browniealice.net/categories/technote/</loc>
+    <lastmod>2020-01-07T00:29:58+09:00</lastmod>
   </url>
   
   <url>
@@ -19,16 +44,6 @@
   
   <url>
     <loc>https://blog.browniealice.net/tags/internship/</loc>
-    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.browniealice.net/post/</loc>
-    <lastmod>2019-03-31T21:28:47+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.browniealice.net/tags/</loc>
     <lastmod>2019-03-31T21:28:47+09:00</lastmod>
   </url>
   
@@ -49,11 +64,6 @@
   
   <url>
     <loc>https://blog.browniealice.net/tags/c&#43;&#43;/</loc>
-    <lastmod>2019-01-04T09:46:46+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.browniealice.net/categories/technote/</loc>
     <lastmod>2019-01-04T09:46:46+09:00</lastmod>
   </url>
   
@@ -105,11 +115,6 @@
   <url>
     <loc>https://blog.browniealice.net/post/how_to_use_urg/</loc>
     <lastmod>2018-01-01T21:25:44+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.browniealice.net/tags/server/</loc>
-    <lastmod>2017-12-10T17:42:44+09:00</lastmod>
   </url>
   
   <url>

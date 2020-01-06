@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Arch LinuxでROS Lunarを使う - Alice in the Machine - Blog</title>
+    <title>LFTPでハマった話 - Alice in the Machine - Blog</title>
     <meta name="pinterest" content="nopin">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <link rel="dns-prefetch preconnect" href="https://fonts.gstatic.com"  crossorigin>
@@ -23,22 +23,22 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     
-<meta name="description" content="経緯 ロボット界隈では相当有名で, 最近ではaiboでも使われていることで話題になっているROS. 現在の最新版であるROS Lunarが公式に対応">
+<meta name="description" content="技術的な話というよりただの愚痴に近いです. LFTPはFTPやSFTPなどのいくつかのプロトコルに対応したファイル転送ソフトウェアです. 私の所">
 
-<meta property="og:title" content="Arch LinuxでROS Lunarを使う - Alice in the Machine - Blog">
+<meta property="og:title" content="LFTPでハマった話 - Alice in the Machine - Blog">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://blog.browniealice.net/post/ros-lunar_on_arch/">
-<meta property="og:image" content="https://blog.browniealice.net/rqt_graph.png">
+<meta property="og:url" content="https://blog.browniealice.net/post/stuck_on_lftp/">
+<meta property="og:image" content="https://blog.browniealice.net/CICD.png">
 <meta property="og:site_name" content="Alice in the Machine - Blog">
-<meta property="og:description" content="経緯 ロボット界隈では相当有名で, 最近ではaiboでも使われていることで話題になっているROS. 現在の最新版であるROS Lunarが公式に対応">
+<meta property="og:description" content="技術的な話というよりただの愚痴に近いです. LFTPはFTPやSFTPなどのいくつかのプロトコルに対応したファイル転送ソフトウェアです. 私の所">
 <meta property="og:locale" content="ja_JP">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="Alice in the Machine - Blog">
-<meta name="twitter:url" content="https://blog.browniealice.net/post/ros-lunar_on_arch/">
-<meta name="twitter:title" content="Arch LinuxでROS Lunarを使う - Alice in the Machine - Blog">
-<meta name="twitter:description" content="経緯 ロボット界隈では相当有名で, 最近ではaiboでも使われていることで話題になっているROS. 現在の最新版であるROS Lunarが公式に対応">
-<meta name="twitter:image" content="https://blog.browniealice.net/rqt_graph.png">
+<meta name="twitter:url" content="https://blog.browniealice.net/post/stuck_on_lftp/">
+<meta name="twitter:title" content="LFTPでハマった話 - Alice in the Machine - Blog">
+<meta name="twitter:description" content="技術的な話というよりただの愚痴に近いです. LFTPはFTPやSFTPなどのいくつかのプロトコルに対応したファイル転送ソフトウェアです. 私の所">
+<meta name="twitter:image" content="https://blog.browniealice.net/CICD.png">
 
 
 <script type="application/ld+json">
@@ -49,15 +49,15 @@
       "@type": "WebPage",
       "@id":"https:\/\/blog.browniealice.net\/"
     },
-    "headline": "Arch LinuxでROS Lunarを使う-Alice in the Machine - Blog",
+    "headline": "LFTPでハマった話-Alice in the Machine - Blog",
     "image": {
       "@type": "ImageObject",
-      "url": "https:\/\/blog.browniealice.net\/rqt_graph.png",
+      "url": "https:\/\/blog.browniealice.net\/CICD.png",
       "height": 800,
       "width": 800
     },
-    "datePublished": "2018-04-30T21:48:13JST",
-    "dateModified": "2018-04-30T21:48:13JST",
+    "datePublished": "2020-01-07T00:29:58JST",
+    "dateModified": "2020-01-07T00:29:58JST",
     "author": {
       "@type": "Person",
       "name": "Alice in the Machine - Blog"
@@ -72,13 +72,13 @@
         "height": 60
       }
     },
-    "description": "経緯 ロボット界隈では相当有名で, 最近ではaiboでも使われていることで話題になっているROS. 現在の最新版であるROS Lunarが公式に対応"
+    "description": "技術的な話というよりただの愚痴に近いです. LFTPはFTPやSFTPなどのいくつかのプロトコルに対応したファイル転送ソフトウェアです. 私の所"
   }
 </script>
 
 
 
-    <link rel="canonical" href="https://blog.browniealice.net/post/ros-lunar_on_arch/">
+    <link rel="canonical" href="https://blog.browniealice.net/post/stuck_on_lftp/">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
     
@@ -1160,95 +1160,80 @@ section.footer > header a {
 
     <article class="sn">
 
-  <div class="thumb thumb-ee84d407087adef45b4a457045822071"></div>
+  <div class="thumb thumb-54894cb8ca34f95f4f501f4326a8e2d0"></div>
 
   <header class="article-header">
-    <h1 class="title">Arch LinuxでROS Lunarを使う</h1>
+    <h1 class="title">LFTPでハマった話</h1>
 
     <ul class="facts">
-      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2018-04-30T21:48:13JST">2018-04-30</time></li>
+      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2020-01-07T00:29:58JST">2020-01-07</time></li>
       
       <li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="https://blog.browniealice.net/post/">POST</a></li>
       
     </ul>
 
     <aside class="share">
-  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f&title=Arch%20Linux%e3%81%a7ROS%20Lunar%e3%82%92%e4%bd%bf%e3%81%86" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
-  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f&text=Arch%20Linux%e3%81%a7ROS%20Lunar%e3%82%92%e4%bd%bf%e3%81%86&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f&t=Arch%20Linux%e3%81%a7ROS%20Lunar%e3%82%92%e4%bd%bf%e3%81%86" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-  <a href="https://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f&title=Arch%20Linux%e3%81%a7ROS%20Lunar%e3%82%92%e4%bd%bf%e3%81%86" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
-  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f&title=LFTP%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e8%a9%b1" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f&text=LFTP%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e8%a9%b1&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f&t=LFTP%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e8%a9%b1" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f&title=LFTP%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e8%a9%b1" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
 </aside>
 
   </header>
 
   
-  <div class="toc">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">経緯</a></li>
-    <li><a href="#heading-1">インストール</a></li>
-    <li><a href="#heading-2">初期設定</a></li>
-    <li><a href="#heading-3">起動確認</a></li>
-  </ul>
-</nav>
-  </div>
-  
 
-  <div class="article-body"><h2 id="heading">経緯</h2>
-<p>ロボット界隈では相当有名で, 最近では<a href="https://aibo.sony.jp/">aibo</a>でも使われていることで話題になっている<a href="http://wiki.ros.org/">ROS</a>.
-現在の最新版であるROS Lunarが公式に対応<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>しているのはUbuntu/Debian/Gentooあたりです.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><br>
-最近私は<a href="https://www.archlinux.org/">Arch Linux</a>に乗り換えたのでArchでもROSを使おうと思い始めました.
-実はAURにROS Lunarは存在し, <a href="https://wiki.archlinux.jp/index.php/Ros">日本語wikiページ</a>も存在します.<br>
-ただ</p>
-<blockquote>
-<p>ROS Lunar は AUR パッケージでインストールすることができ、問題なく動作します。</p>
-</blockquote>
-<p>と書かれているものの, そのままではインストールに失敗するところがいくつかありました.
-正直Archを使ってる人には不要だと思いますが, どうすればうまくインストールすることが出来るのか書いておきます.</p>
-<h2 id="heading-1">インストール</h2>
-<p>今回は<a href="https://aur.archlinux.org/packages/ros-lunar-desktop-full/">ros-lunar-desktop-full</a>をインストールします.<br>
-そのままインストールしていると, おそらく<a href="https://aur.archlinux.org/packages/ros-lunar-image-view/">ros-lunar-image-view</a>のビルドで失敗します.
-これはコメントにも書かれていますが, 本来は必要な<a href="https://www.archlinux.org/packages/extra/x86_64/gtkglext/">gtkglext</a>が依存関係に含まれていないためです.
-前もってインストールしておきましょう.<br>
-おそらくインストールはこれで無事終わるはずです.
-なのでインストール自体はこんな感じで終わるはずです.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S gtkglext
-yaourt -S ros-lunar-desktop-full
-</code></pre></div><p>ちなみに, ros-lunar-desktop-fullはひたすらyを押す必要があるので <code>--noconfirm</code> オプションをつけておくと良いでしょう.</p>
-<h2 id="heading-2">初期設定</h2>
-<p>次にROSの <code>catkin_ws</code> をビルドします.
-ですが, このビルドも失敗します.<br>
-理由としては <code>python-empy</code> と <code>catkin-pkg</code> の2つが認識できていないためです.
-前者はAURにある<a href="https://aur.archlinux.org/packages/python-empy/">python-empy</a>をインストールすることで解決します.<br>
-後者は, 依存関係により<a href="https://aur.archlinux.org/packages/python2-catkin_pkg/">python2-catkin_pkg</a>がインストールされているはずなのですが何故か認識されません.
-なので, pipの <code>catkin-pkg</code> を無理やり入れて解決しました.<br>
-結果としては以下のコマンドを打ってから <code>catkin_make</code> しました.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yaourt -S python-empy
-sudo pacman -S python-pip
-pip install --user catkin-pkg
-</code></pre></div><h2 id="heading-3">起動確認</h2>
-<p>とりあえずturtlesimでも起動してみます.</p>
-<figure>
-  <img src="https://blog.browniealice.net/post/ros-lunar_on_arch/turtle_sim_hu410a42053cc12117f2cc1acbbae04c7d_8356_768x0_resize_box_2.png" alt="turtlesim">
-  <figcaption>
-    turtlesim
-  </figcaption>
-</figure>
-<p>無事動きました.
-他にもrqt_bagやrvizや自作プログラムを走らせましたが今のところ問題なさそうでした.<br>
-この辺の話は本来ならissueを投げるみたいなことをすべきなのかもしれませんが, Archは最近使い始めたばかりでコミュニティについて全然理解してないので自分のブログに書く程度にとどめておきます.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+  <div class="article-body"><p>技術的な話というよりただの愚痴に近いです.</p>
+<p><a href="http://lftp.yar.ru/">LFTP</a>はFTPやSFTPなどのいくつかのプロトコルに対応したファイル転送ソフトウェアです.<br>
+私の所属する研究室では, 研究室のHPを大学のサーバ代行サービスを用いて大学のサーバ上で動かしています.
+そのサーバはファイル転送プロトコルとしてSFTPのみしか受け付けていないため, HPを更新する際はSFTPでファイルを更新しています.<br>
+また, 研究室のHP自体は<a href="https://middlemanapp.com/">Middleman</a>という静的サイトジェネレーターを利用しているため,</p>
+<ol>
+<li>ローカル環境でファイルを変更</li>
+<li>研究室のGitLabにpush</li>
+<li>GitLab Runnerによってビルド</li>
+<li>GitLab Runnerによって成果物がアップロード</li>
+</ol>
+<p>という形式でHPを更新しています.<br>
+自動化する都合上, SFTPを直接実行するのは面倒なので前述したLFTPを利用していました.</p>
+<p>GitLab Runnerが新しく立ち上げたDockerコンテナ上でLFTPを動かしてSFTPでサイトを更新するため, SFTPで大学のサーバに入る際は毎回初回アクセスになります.<br>
+すなわち, 毎回新しいホスト鍵を受け入れるかどうか聞かれます.
+LFTPはこのような事態も考慮しており <code>sftp:auto-confirm</code> を <code>yes</code> に設定しておくと, 自動で鍵を受け入れてくれます.<br>
+GitLab Runnerに以下のスクリプトを実行させることで自動でサイトを更新するCD環境を構築できました.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>
+lftp <span style="color:#e6db74">&lt;&lt;EOF
+</span><span style="color:#e6db74">set cmd:fail-exit true
+</span><span style="color:#e6db74">set ssl:verify-certificate no
+</span><span style="color:#e6db74">set sftp:auto-confirm yes
+</span><span style="color:#e6db74">open -u $DEPLOY_USERNAME,$DEPLOY_PASSWORD sftp://$DEPLOY_URL
+</span><span style="color:#e6db74">lcd build
+</span><span style="color:#e6db74">cd www
+</span><span style="color:#e6db74">mirror -R
+</span><span style="color:#e6db74">exit
+</span><span style="color:#e6db74">EOF</span>
+</code></pre></div><p>というわけで, 快適な環境を構築できたのですが突然動かなくなりました.
+なぜ?</p>
+<p>前述した鍵を受け入れるオプションは割と力技的な実装で, OpenSSHが <em>(yes/no)?</em> と聞いてきたときに <em>yes</em> と返すだけのようです.
+それがOpenSSH 8.0以降では <em>(yes/no/[fingerprint])?</em> と聞いてくるようになり, 従来の文字列マッチにヒットしないような質問文になったようです.
+もちろんすでに対応されており, LFTPのバージョン4.9.0からは適切に処理できるようです. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>サイト更新を行うGitLab RunnerのコンテナのイメージにはAlpine Linuxの最新版<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>を利用していたのですが, 不幸なことにそのソフトウェアリポジトリにはOpenSSH 8.1とLFTP 4.8.4が登録されていました.<br>
+Runnerは起動する度にOpenSSHとLFTPをインストールような設定で動かしていたため, 運悪くOpenSSHの更新だけが反映されたタイミングに巡り合ってしまい突然動かなくなったようです.<br>
+最終的にはAlpine Linuxの開発版(edge)を利用することで解決しましが, どこが問題なのかの突き止めるのに時間がかかって非常に面倒でした&hellip;<br>
+必要なソフト全部入れたイメージを作ってそれで動かせって話だとは思うんですけど, これくらいいやろって思ってたんでうーんという感じでした.<br>
+Dockerとかって嫌なところを消し去ってくれて便利ですけど, 変な問題に遭遇すると消し去ってた嫌なところを確認しに行かないといけないんだなというお気持ちになりました.</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>実験的にサポートされているものを含む. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://github.com/lavv17/lftp/issues/525">https://github.com/lavv17/lftp/issues/525</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p><a href="http://wiki.ros.org/lunar/Installation">http://wiki.ros.org/lunar/Installation</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="http://lftp.yar.ru/news.html">http://lftp.yar.ru/news.html</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p>gtkglextに関してはすでにコメントされてますしね. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>当時はv3.11 <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
@@ -1257,11 +1242,11 @@ pip install --user catkin-pkg
   <footer class="article-footer">
 
     <aside class="share">
-  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f&title=Arch%20Linux%e3%81%a7ROS%20Lunar%e3%82%92%e4%bd%bf%e3%81%86" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
-  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f&text=Arch%20Linux%e3%81%a7ROS%20Lunar%e3%82%92%e4%bd%bf%e3%81%86&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f&t=Arch%20Linux%e3%81%a7ROS%20Lunar%e3%82%92%e4%bd%bf%e3%81%86" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-  <a href="https://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f&title=Arch%20Linux%e3%81%a7ROS%20Lunar%e3%82%92%e4%bd%bf%e3%81%86" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
-  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fros-lunar_on_arch%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f&title=LFTP%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e8%a9%b1" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f&text=LFTP%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e8%a9%b1&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f&t=LFTP%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e8%a9%b1" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f&title=LFTP%e3%81%a7%e3%83%8f%e3%83%9e%e3%81%a3%e3%81%9f%e8%a9%b1" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fstuck_on_lftp%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
 </aside>
 
 
@@ -1273,7 +1258,7 @@ pip install --user catkin-pkg
             
             <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.browniealice.net/post/" itemprop="url"><span itemprop="title">POST</span></a></li>
             
-            <li class="active">Arch LinuxでROS Lunarを使う</li>
+            <li class="active">LFTPでハマった話</li>
           </ol>
         </nav>
       </div>
@@ -1306,7 +1291,7 @@ pip install --user catkin-pkg
       <div>
         <ul class="terms">
           
-          <li><a href="https://blog.browniealice.net/tags/ros/">ROS</a></li>
+          <li><a href="https://blog.browniealice.net/tags/server/">server</a></li>
           
         </ul>
       </div>
@@ -1324,14 +1309,14 @@ pip install --user catkin-pkg
         <div class="mcol c6">
           <header>Previous Article</header>
           <article class="lism">
-  <a href="https://blog.browniealice.net/post/latex_transpose/">
-    <div class="thumb thumb-latest-1f54bebe319e5f724f55a67ebe1033b3"></div>
+  <a href="https://blog.browniealice.net/post/internship2019winter/">
+    <div class="thumb thumb-latest-ea9cca8939f6c1d0f690ed518c5ef3c3"></div>
 
     <div class="inner">
-      <div class="title">LaTeXでの転置行列の表記</div>
+      <div class="title">大企業の技術系インターンシップに参加した</div>
 
       <ul class="facts sm">
-        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-01-14T00:50:09JST">2018-01-14</time></li>
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="31007-03-31T21:28:47JST">2019-03-31</time></li>
         <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
         
       </ul>
@@ -1342,27 +1327,6 @@ pip install --user catkin-pkg
 
         </div>
         
-        
-        <div class="mcol c6">
-          <header>Next Article</header>
-          <article class="lism">
-  <a href="https://blog.browniealice.net/post/arch_esp32_arduino_ide/">
-    <div class="thumb thumb-latest-4255232408838ede9a4cc98425641f37"></div>
-
-    <div class="inner">
-      <div class="title">Arch LinuxでESP32の環境を構築(Arduino IDE)</div>
-
-      <ul class="facts sm">
-        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2007-09-02T03:51:18JST">2018-09-02</time></li>
-        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
-        
-      </ul>
-
-    </div>
-  </a>
-</article>
-
-        </div>
         
       </div>
     </div>

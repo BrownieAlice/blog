@@ -13,10 +13,19 @@
 このサイトのテキストは原則として
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt;
 の下に提供されています.</copyright>
-    <lastBuildDate>Fri, 04 Jan 2019 09:46:46 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 00:29:58 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.browniealice.net/categories/technote/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LFTPでハマった話</title>
+      <link>https://blog.browniealice.net/post/stuck_on_lftp/</link>
+      <pubDate>Tue, 07 Jan 2020 00:29:58 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/stuck_on_lftp/</guid>
+      <description>技術的な話というよりただの愚痴に近いです. LFTPはFTPやSFTPなどのいくつかのプロトコルに対応したファイル転送ソフトウェアです. 私の所</description>
+    </item>
     
     <item>
       <title>構造化束縛分かってなかった</title>
