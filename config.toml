@@ -7,7 +7,7 @@ disqusShortname = "alice-in-the-machine-blog"
 hasCJKLanguage = true
 pygmentsCodeFences = true
 copyright = """
-Copyright &copy; 2017-2019, BrownieAlice.<br>
+Copyright &copy; 2017-2020, BrownieAlice.<br>
 <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>
 <img alt='クリエイティブ・コモンズ・ライセンス' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/4.0/80x15.png' />
 </a><br>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>latex - Alice in the Machine - Blog</title>
+    <title>C&#43;&#43;のRangeでFizzBuzzしてみた - Alice in the Machine - Blog</title>
     <meta name="pinterest" content="nopin">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <link rel="dns-prefetch preconnect" href="https://fonts.gstatic.com"  crossorigin>
@@ -14,8 +14,6 @@
 <link rel="apple-touch-icon" href="https://blog.browniealice.net/images/logo.png">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://blog.browniealice.net/tags/latex/index.xml" title="Alice in the Machine - Blog">
-
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -25,8 +23,62 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
     
+<meta name="description" content="C&#43;&#43;初心者の記事なのでいろいろアレだとは思いますがお許しください. Rangeライブラリ C&#43;&#43;20ではRangeが新しい標準ライブラリに追加">
 
-    <link rel="canonical" href="https://blog.browniealice.net/tags/latex/">
+<meta property="og:title" content="C&#43;&#43;のRangeでFizzBuzzしてみた - Alice in the Machine - Blog">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.browniealice.net/post/fizzbuzz_with_range/">
+<meta property="og:image" content="https://blog.browniealice.net/thumnail.png">
+<meta property="og:site_name" content="Alice in the Machine - Blog">
+<meta property="og:description" content="C&#43;&#43;初心者の記事なのでいろいろアレだとは思いますがお許しください. Rangeライブラリ C&#43;&#43;20ではRangeが新しい標準ライブラリに追加">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="Alice in the Machine - Blog">
+<meta name="twitter:url" content="https://blog.browniealice.net/post/fizzbuzz_with_range/">
+<meta name="twitter:title" content="C&#43;&#43;のRangeでFizzBuzzしてみた - Alice in the Machine - Blog">
+<meta name="twitter:description" content="C&#43;&#43;初心者の記事なのでいろいろアレだとは思いますがお許しください. Rangeライブラリ C&#43;&#43;20ではRangeが新しい標準ライブラリに追加">
+<meta name="twitter:image" content="https://blog.browniealice.net/thumnail.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.browniealice.net\/"
+    },
+    "headline": "C++のRangeでFizzBuzzしてみた-Alice in the Machine - Blog",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.browniealice.net\/thumnail.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2020-03-05T01:10:01JST",
+    "dateModified": "2020-03-05T01:10:01JST",
+    "author": {
+      "@type": "Person",
+      "name": "Alice in the Machine - Blog"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Alice in the Machine - Blog",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.browniealice.net\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "C\x2b\x2b初心者の記事なのでいろいろアレだとは思いますがお許しください. Rangeライブラリ C\x2b\x2b20ではRangeが新しい標準ライブラリに追加"
+  }
+</script>
+
+
+
+    <link rel="canonical" href="https://blog.browniealice.net/post/fizzbuzz_with_range/">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
     
@@ -884,42 +936,254 @@ section.footer > header a {
 <div class="mrow">
   <div class="mcol c8">
 
-    
-    <header class="page-title">
-      <h1 class="title">latex</h1>
-    </header>
-    
+    <article class="sn">
 
-    <div class="articles">
+  <div class="thumb thumb-ae299337fd7017519ab102eac1d8f264"></div>
+
+  <header class="article-header">
+    <h1 class="title">C&#43;&#43;のRangeでFizzBuzzしてみた</h1>
+
+    <ul class="facts">
+      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2020-03-05T01:10:01JST">2020-03-05</time></li>
+      
+      <li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="https://blog.browniealice.net/post/">POST</a></li>
+      
+    </ul>
+
+    <aside class="share">
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f&title=C%2b%2b%e3%81%aeRange%e3%81%a7FizzBuzz%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f&text=C%2b%2b%e3%81%aeRange%e3%81%a7FizzBuzz%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f&t=C%2b%2b%e3%81%aeRange%e3%81%a7FizzBuzz%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f&title=C%2b%2b%e3%81%aeRange%e3%81%a7FizzBuzz%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+</aside>
+
+  </header>
+
+  
+
+  <div class="article-body"><p>C++初心者の記事なのでいろいろアレだとは思いますがお許しください.</p>
+<h2 id="rangeライブラリ">Rangeライブラリ</h2>
+<p>C++20ではRangeが新しい標準ライブラリに追加されます.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>
+残念ながらほとんどのコンパイラは2020年3月現在は対応していないようですが,<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> 提案者のEric Niebler氏が提案の基礎としてRangeライブラリを作り公開されています.<br>
+今回は, その<a href="https://github.com/ericniebler/range-v3">range-v3</a>ライブラリを用いてFizzBuzzしてみました.
+インストールは簡単で, Arch Linuxであれば</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S range-v3
+</code></pre></div><p>だけで終わりです.<br>
+ヘッダオンリーのライブラリのようなので, コンパイル時にリンクさせる必要もありません.</p>
+<h2 id="シンプルバージョン">シンプルバージョン</h2>
+<p><code>views::iota</code>関数で指定の長さの連続整数列を生成し, <code>views::transform</code>関数で数値か <em>Fizz</em> か <em>Buzz</em> か <em>FizzBuzz</em> に変換して終わりです.<br>
+ただ, そのままだと標準出力できないので<code>views::all</code>関数を利用しています.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
+コードは以下の通り.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;range/v3/view/iota.hpp&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;range/v3/view/transform.hpp&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> ranges;
+  std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> views<span style="color:#f92672">::</span>all(views<span style="color:#f92672">::</span>iota(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">50</span>) <span style="color:#f92672">|</span>
+                          views<span style="color:#f92672">::</span>transform([](<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> i) <span style="color:#f92672">-&gt;</span> std<span style="color:#f92672">::</span>string {
+                            <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">%</span> <span style="color:#ae81ff">15</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+                              <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Fizz Buzz&#34;</span>;
+                            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">%</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+                              <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Buzz&#34;</span>;
+                            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+                              <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Fizz&#34;</span>;
+                            } <span style="color:#66d9ef">else</span> {
+                              <span style="color:#66d9ef">return</span> std<span style="color:#f92672">::</span>to_string(i);
+                            }
+                          }))
+            <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+}
+</code></pre></div><p>案外普通な感じでつまんないですね.</p>
+<h2 id="おふざけバージョン">おふざけバージョン</h2>
+<p>シンプルバージョンは面白くなかったので少し凝ってみました.
+<code>views::transform</code>関数を使うだけだと面白くないので, <code>views::replace_if</code>関数<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>を用いて順番に <em>FizzBuzz</em> ・ <em>Buzz</em> ・ <em>Fizz</em> を生成する感じにしました.<br>
+ただ, そのままでは文字列と数値を混在させることはできないので, variantを使って無理やり両方扱わせています.<br>
+コードは以下の通り.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;range/v3/view/iota.hpp&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;range/v3/view/replace_if.hpp&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;range/v3/view/transform.hpp&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;variant&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> ranges;
+  std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> views<span style="color:#f92672">::</span>all(views<span style="color:#f92672">::</span>iota(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">50</span>) <span style="color:#f92672">|</span>
+                          views<span style="color:#f92672">::</span>transform([](<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> i) {
+                            <span style="color:#66d9ef">return</span> std<span style="color:#f92672">::</span>variant<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span>(i);
+                          }) <span style="color:#f92672">|</span>
+                          views<span style="color:#f92672">::</span>replace_if(
+                              [](<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>i) {
+                                <span style="color:#66d9ef">return</span> std<span style="color:#f92672">::</span>holds_alternative<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(i) <span style="color:#f92672">&amp;&amp;</span>
+                                       std<span style="color:#f92672">::</span>get<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(i) <span style="color:#f92672">%</span> <span style="color:#ae81ff">15</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
+                              },
+                              <span style="color:#e6db74">&#34;Fizz Buzz&#34;</span>) <span style="color:#f92672">|</span>
+                          views<span style="color:#f92672">::</span>replace_if(
+                              [](<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>i) {
+                                <span style="color:#66d9ef">return</span> std<span style="color:#f92672">::</span>holds_alternative<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(i) <span style="color:#f92672">&amp;&amp;</span>
+                                       std<span style="color:#f92672">::</span>get<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(i) <span style="color:#f92672">%</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
+                              },
+                              <span style="color:#e6db74">&#34;Buzz&#34;</span>) <span style="color:#f92672">|</span>
+                          views<span style="color:#f92672">::</span>replace_if(
+                              [](<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>i) {
+                                <span style="color:#66d9ef">return</span> std<span style="color:#f92672">::</span>holds_alternative<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(i) <span style="color:#f92672">&amp;&amp;</span>
+                                       std<span style="color:#f92672">::</span>get<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(i) <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>;
+                              },
+                              <span style="color:#e6db74">&#34;Fizz&#34;</span>) <span style="color:#f92672">|</span>
+                          views<span style="color:#f92672">::</span>transform([](<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>i) {
+                            <span style="color:#66d9ef">if</span> (std<span style="color:#f92672">::</span>holds_alternative<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(i)) {
+                              <span style="color:#66d9ef">return</span> std<span style="color:#f92672">::</span>to_string(std<span style="color:#f92672">::</span>get<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(i));
+                            } <span style="color:#66d9ef">else</span> {
+                              <span style="color:#66d9ef">return</span> std<span style="color:#f92672">::</span>get<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span>(i);
+                            }
+                          }))
+            <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+}
+</code></pre></div><p>なんかカオスなコードになってきて面白いですね.
+シンプルバージョンに比べてコンパイル時間もだいぶ増えて, 3秒くらいかかるようになっちゃいました.</p>
+<p>分厚い提案書以外の情報があまりないRangeライブラリですが, コンパイラがサポートし始めたらどんどん使っていきたいですね.</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://github.com/ericniebler/range-v3">ericniebler/range-v3: Range library for C++14/17/20, basis for C++20&rsquo;s std::ranges</a></li>
+<li><a href="http://ericniebler.com/2018/12/05/standard-ra.nges/">Standard Ranges – Eric Niebler</a></li>
+<li><a href="https://ezoeryou.github.io/blog/article/2019-01-10-range-view.html">The overview of C++20 Range view</a></li>
+<li><a href="https://en.cppreference.com/w/cpp/ranges">Ranges library (C++20) - cppreference.com</a></li>
+<li><a href="https://ja.cppreference.com/w/cpp/ranges">範囲ライブラリ (C++20) - cppreference.com</a></li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0896r4.pdf">P0896R4 &ldquo;The One Ranges Proposal&rdquo;</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://en.cppreference.com/w/cpp/compiler_support">https://en.cppreference.com/w/cpp/compiler_support</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>ここあんまりよくわかってないのでおまじない感覚で入れてます&hellip; <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>この関数はC++20のRangeライブラリに導入されるのかよくわかりません <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+
+  <footer class="article-footer">
+
+    <aside class="share">
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f&title=C%2b%2b%e3%81%aeRange%e3%81%a7FizzBuzz%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f&text=C%2b%2b%e3%81%aeRange%e3%81%a7FizzBuzz%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f&t=C%2b%2b%e3%81%aeRange%e3%81%a7FizzBuzz%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f&title=C%2b%2b%e3%81%aeRange%e3%81%a7FizzBuzz%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2ffizzbuzz_with_range%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+</aside>
+
+
+    <section class="footer">
+      <div>
+        <nav class="crumb">
+          <ol>
+            <li><a href="https://blog.browniealice.net/"><i class="fas fa-home" aria-hidden="true"></i>TOP</a></li>
+            
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.browniealice.net/post/" itemprop="url"><span itemprop="title">POST</span></a></li>
+            
+            <li class="active">C&#43;&#43;のRangeでFizzBuzzしてみた</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    
+    
+    
+    <section class="footer">
+      <header>
+        <a href="https://blog.browniealice.net/categories/">CATEGORIES</a>
+      </header>
+      <div>
+        <ul class="terms">
+          
+          <li><a href="https://blog.browniealice.net/categories/technote/">TechNote</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+    
+    <section class="footer">
+      <header>
+        <a href="https://blog.browniealice.net/tags/">TAGS</a>
+      </header>
+      <div>
+        <ul class="terms">
+          
+          <li><a href="https://blog.browniealice.net/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+  </footer>
+
+</article>
+
+
+    <div class="adj">
       <div class="mrow">
         
-        
-        
-        
-        <div class="mcol c6"><article class="li">
-  <a href="https://blog.browniealice.net/post/latex_transpose/">
-    <div class="thumb thumb-1f54bebe319e5f724f55a67ebe1033b3"></div>
+        <div class="mcol c6">
+          <header>Previous Article</header>
+          <article class="lism">
+  <a href="https://blog.browniealice.net/post/stuck_on_lftp/">
+    <div class="thumb thumb-54894cb8ca34f95f4f501f4326a8e2d0"></div>
 
     <div class="inner">
-      <h2 class="title">LaTeXでの転置行列の表記</h2>
+      <div class="title">LFTPでハマった話</div>
 
-      <ul class="facts">
-        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2018-01-14T00:50:09JST">2018-01-14</time></li>
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="7007-01-07T00:29:58JST">2020-01-07</time></li>
         <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
         
       </ul>
 
-      <div class="summary">転置記号の候補 $\rm \LaTeX$で転置行列を書こうとするときに, 右上に書く転置記号をどう記載するかで悩んだのでメモしておく. $A$行列の転置行</div>
     </div>
   </a>
 </article>
-</div>
+
+        </div>
+        
         
       </div>
     </div>
 
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
-
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alice-in-the-machine-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
   </div>
   <div class="mcol c4">
     <aside class="l-sidebar">
