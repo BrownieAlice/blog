@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Arch Linux上でZoom用の仮想カメラ/マイクを作る - Alice in the Machine - Blog</title>
+    <meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<link rel="dns-prefetch preconnect" href="https://fonts.gstatic.com"  crossorigin>
+<link rel="dns-prefetch preconnect" href="https://use.fontawesome.com"  crossorigin>
+<meta name="theme-color" content="#263238">
+
+<meta name="generator" content="Hugo 0.74.3" />
+
+<link rel="apple-touch-icon" href="https://blog.browniealice.net/images/logo.png">
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+    
+<meta name="description" content="新型コロナウイルスの影響で卒論発表が Zoom で開催されることとなり, 従来研究室の学生が行っていたタイムキーパーも Zoom 上で行うことになりました. ブラウ">
+
+<meta property="og:title" content="Arch Linux上でZoom用の仮想カメラ/マイクを作る - Alice in the Machine - Blog">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.browniealice.net/post/zoom_virtual_cam_and_mic_on_arch/">
+<meta property="og:image" content="https://blog.browniealice.net/zoom.png">
+<meta property="og:site_name" content="Alice in the Machine - Blog">
+<meta property="og:description" content="新型コロナウイルスの影響で卒論発表が Zoom で開催されることとなり, 従来研究室の学生が行っていたタイムキーパーも Zoom 上で行うことになりました. ブラウ">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="Alice in the Machine - Blog">
+<meta name="twitter:url" content="https://blog.browniealice.net/post/zoom_virtual_cam_and_mic_on_arch/">
+<meta name="twitter:title" content="Arch Linux上でZoom用の仮想カメラ/マイクを作る - Alice in the Machine - Blog">
+<meta name="twitter:description" content="新型コロナウイルスの影響で卒論発表が Zoom で開催されることとなり, 従来研究室の学生が行っていたタイムキーパーも Zoom 上で行うことになりました. ブラウ">
+<meta name="twitter:image" content="https://blog.browniealice.net/zoom.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.browniealice.net\/"
+    },
+    "headline": "Arch Linux上でZoom用の仮想カメラ/マイクを作る-Alice in the Machine - Blog",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.browniealice.net\/zoom.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2020-08-26T15:39:22JST",
+    "dateModified": "2020-08-26T15:39:22JST",
+    "author": {
+      "@type": "Person",
+      "name": "Alice in the Machine - Blog"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Alice in the Machine - Blog",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.browniealice.net\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "新型コロナウイルスの影響で卒論発表が Zoom で開催されることとなり, 従来研究室の学生が行っていたタイムキーパーも Zoom 上で行うことになりました. ブラウ"
+  }
+</script>
+
+
+
+    <link rel="canonical" href="https://blog.browniealice.net/post/zoom_virtual_cam_and_mic_on_arch/">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style>
+html {
+  font-size: 18px;
+  background-color: rgba(236,239,241,.5);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+body {
+  color: #333;
+  font-family: 'Roboto Slab','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif;
+  font-feature-settings : "palt";
+  font-size: inherit;
+  line-height: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1rem;
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed #cfd8dc;
+  margin: 1rem 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1rem;
+}
+
+a {
+  color: #2196f3;
+  text-decoration: none;
+  transition-duration: .3s;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+
+th, td {
+  font-size: .8rem;
+  padding: .5rem;
+}
+
+tr {
+  border-bottom: 1px dashed #ddd;
+}
+
+/* Layouts */
+main,
+aside {
+  display: block;
+}
+
+main { padding: 1rem 0 3rem 0; }
+aside.h { padding: 3rem 0; }
+
+main.f,
+aside.f {
+  background-color: #333;
+  border-top: 2px dashed #fff;
+  border-bottom: 2px dashed #fff;
+}
+
+.l-container {
+  position: relative;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.l-container.thin {
+  max-width: 44rem;
+}
+
+.l-header {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.l-header .description {
+  margin-top: .5rem;
+  font-size: .8rem;
+}
+
+.l-footer {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  font-size: .6rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .l-sidebar {
+    margin-top: 4rem;
+  }
+}
+
+.mrow {
+  margin: 0 -1rem;
+  overflow: hidden;
+}
+
+.mcol {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 1rem;
+}
+
+.c6 { width: 50%; }
+.c4 { width: 33.26323833%; }
+.c8 { width: 66.66666%; }
+
+@media (max-width: 768px) {
+  .mcol {
+    width: 100%;
+    float: none;
+  }
+}
+
+.logo a {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.articles {
+  margin: -1rem 0;
+  margin-bottom: 1rem;
+}
+
+.articles.sm {
+  margin: -.5rem 0;
+  margin-bottom: 0;
+}
+
+article {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+article.li {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  height: 20rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+article.li > a {
+  display: block;
+  color: #333;
+}
+
+article.li .inner {
+  padding: 1rem;
+}
+
+article.li .thumb {
+  height: 8rem;
+}
+
+article.li .title {
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+article.li .summary {
+  font-size: .8rem;
+  height: 6rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+article.li .summary::after {
+  content: '...';
+}
+
+article.lism {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  margin: .5rem 0;
+}
+
+article.lism::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+article.lism > a {
+  display: block;
+  color: #333;
+}
+
+article.lism .inner {
+  display: table-cell;
+  vertical-align: middle;
+  height: 5rem;
+  padding: 0 .75rem;
+}
+
+article.lism .thumb {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+}
+
+article.lism .title {
+  font-weight: 700;
+  font-size: .8rem;
+  margin-bottom: .25rem;
+}
+
+article.sn {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  margin-bottom: 1rem;
+}
+
+article.sn .thumb {
+  height: 20rem;
+}
+
+@media (max-width: 768px) {
+  article.sn .thumb {
+    height: 10rem;
+  }
+}
+
+article.sn > .article-header,
+article.sn > .article-body,
+article.sn .article-footer {
+  padding: 2rem;
+}
+
+article.sn > .article-body {
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-header,
+  article.sn > .article-body,
+  article.sn .article-footer {
+    padding: 1rem;
+  }
+
+  article.sn > .article-body {
+    padding: 0 1rem;
+  }
+}
+
+article.sn > .article-header .title {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  margin-bottom: .5rem;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-header .title {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
+}
+
+article.sn > .article-header .facts {
+  margin-bottom: 1rem;
+}
+
+article.sn > .article-body {
+  margin-bottom: 1.5rem;
+}
+
+article.sn > .article-body h2 {
+  border-bottom: .25rem solid #333;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+  padding: .5rem 0;
+}
+
+article.sn > .article-body h3 {
+  border-left: .5rem solid #333;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+  padding: .125rem .5rem;
+}
+
+article.sn > .article-body ul,
+article.sn > .article-body ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+article.sn > .article-body li {
+  padding-bottom: .5rem;
+  line-height: 1.5rem;
+}
+
+article.sn > .article-body li:last-child {
+  padding-bottom: 0;
+}
+article.sn > .article-body p {
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
+
+article.sn > .article-body strong,
+article.sn > .article-body em {
+  font-style: normal;
+  font-weight: 700;
+}
+
+article.sn > .article-body strong {
+  box-shadow: 0 -.5rem 0 0 #ffc107 inset;
+}
+
+article.sn > .article-body em {
+  color: #8bc34a;
+}
+
+article.sn > .article-body code,
+article.sn > .article-body pre {
+  font-family: Menlo, Consolas, monospace;
+  font-size: .7rem;
+}
+
+article.sn > .article-body pre {
+  background-color: #333;
+  color: #fff;
+  line-height: 1rem;
+  margin: 1.5rem -2rem;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-body pre {
+    margin: 1.5rem -1rem;
+  }
+}
+
+article.sn > .article-body pre > code {
+  display: block;
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-body pre > code {
+    padding: 1rem;
+  }
+}
+
+article.sn > .article-body p code {
+  background-color: #eceff1;
+  color: #333;
+  border-radius: 4px;
+  margin: 0 .25rem;
+  padding: .375rem;
+  white-space: nowrap;
+}
+
+article.sn > .article-body blockquote {
+  position: relative;
+  border-left: .25rem solid #333;
+  font-size: .8rem;
+  padding: .125rem 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-body blockquote {
+    font-size: 1rem;
+  }
+}
+
+article.sn > .article-body blockquote p {
+  margin: .5rem 0;
+  line-height: 1rem;
+}
+
+article.sn > .article-body figure {
+  margin: 1.5rem 0;
+}
+
+article.sn > .article-body img,
+article.sn > .article-body figure img,
+article.sn > .article-body figure amp-img {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  max-width: 100%;
+}
+
+article.sn > .article-body figcaption {
+  color: #cfd8dc;
+  font-size: .8rem;
+  font-weight: 700;
+  margin-top: .5rem;
+}
+
+.facts li {
+  display: inline;
+  font-size: .8rem;
+  margin-right: 1rem;
+}
+
+.facts i {
+  color: #cfd8dc;
+  margin-right: .5em;
+}
+
+.facts.sm li {
+  font-size: .7rem;
+}
+
+.sections.sidebar {
+  margin: -1rem 0;
+}
+
+.sections.footer {
+  margin: -1rem 0;
+}
+
+section.sidebar {
+  margin: 2rem 0;
+}
+
+section.sidebar > header {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+section.footer {
+  margin: 1rem 0;
+}
+
+section.footer > header {
+  font-size: .8rem;
+  margin: .5rem 0;
+}
+
+section.footer > header::before {
+  content: "- ";
+}
+
+section.footer > header a {
+  font-weight: 700;
+  color: #333;
+  text-decoration: underline;
+}
+
+.terms {
+  margin: -.25rem;
+}
+
+.terms li {
+  display: inline-block;
+}
+
+.terms a {
+  display: block;
+  float: left;
+  background-color: #333;
+  border-radius: 4px;
+  color: #fff;
+  font-size: .7rem;
+  margin: .25rem;
+  padding: 0 .75rem;
+  line-height: 1.75rem;
+}
+
+.paging {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.paging a {
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  border-radius: 4px;
+  color: #333;
+  padding: 0 1rem;
+  line-height: 3rem;
+}
+
+.page-title {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  border-bottom: .25rem solid #333;
+  width: 3rem;
+  margin: 1.5rem auto;
+}
+
+.page-title > .title {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+/* Parts:breadcrumb */
+.crumb ol {
+  text-overflow: ellipsis;
+  color: #cfd8dc;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.crumb li {
+  display: inline;
+  font-size: .8rem;
+}
+
+.crumb li::after {
+  content: '›';
+  margin: 0 .25rem 0 .5rem;
+}
+
+.crumb li:last-child::after {
+  content: '';
+}
+
+.crumb a {
+  color: #cfd8dc;
+}
+
+.crumb i {
+  margin-right: .5em;
+}
+
+.share {
+  padding: 0;
+}
+
+.share a {
+  display: inline-block;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  min-width: 1rem;
+  height: 2rem;
+  border-radius: 4px;
+  color: #333;
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+  padding: 0 .5rem;
+}
+
+.adj article.lism {
+  margin-bottom: 1rem;
+}
+
+.adj header {
+  font-weight: 700;
+  font-size: .8rem;
+}
+
+.toc {
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .toc {
+    padding: 0 1rem;
+  }
+}
+
+.toc {
+  margin: 1rem 0;
+}
+
+.toc nav>ul {
+  background-color: #eceff1;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: .8rem;
+  padding: .5rem 1rem;
+  word-break: break-all;
+  list-style: none;
+}
+
+.toc ul {
+  padding: 0;
+}
+
+.toc ul ul {
+  padding-left: 1rem;
+}
+
+.toc ul ul ul {
+  padding-left: 1rem;
+}
+
+.toc li {
+  color: #90a4ae;
+}
+
+.toc ul ul>li {
+  font-weight: 700;
+  margin: .5rem 0;
+  list-style-type: decimal;
+}
+
+.toc ul ul ul>li {
+  list-style-type: disc;
+  font-weight: 500;
+}
+
+.author {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.author .author-thumb {
+  margin: 0 auto 1rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #eceff1;
+  background-size: cover;
+  background-position: center;
+}
+
+.author .author-name {
+  margin-bottom: .5rem;
+  font-weight: 700;
+}
+
+.author .author-facts {
+  margin-bottom: 1rem;
+}
+
+.author .author-facts li {
+  display: inline;
+}
+
+.author .author-facts li a {
+  display: inline-block;
+  background-color: #eceff1;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  text-align: center;
+  color: #333;
+  font-size: .8rem;
+  border-radius: 2px;
+}
+
+.author .author-facts li a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.author .author-description {
+  text-align: left;
+  font-size: .8rem;
+}
+
+.author .author-description p {
+  margin: .5rem 0;
+}
+
+.thumb {
+  background-image: url(https://blog.browniealice.net/images/default.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-654a09a3f6a5b35f1b7e0a3ac8284c61 {
+    background-image: url(https://blog.browniealice.net/post/zoom_virtual_cam_and_mic_on_arch/zoom_hu45d9c4337186f3291d1c87476dbcc271_82402_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-654a09a3f6a5b35f1b7e0a3ac8284c61 {
+    background-image: url(https://blog.browniealice.net/post/zoom_virtual_cam_and_mic_on_arch/zoom_hu45d9c4337186f3291d1c87476dbcc271_82402_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-ae299337fd7017519ab102eac1d8f264 {
+    background-image: url(https://blog.browniealice.net/post/fizzbuzz_with_range/thumnail_hu3e458b99f0d688fe678546d261747836_138251_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-ae299337fd7017519ab102eac1d8f264 {
+    background-image: url(https://blog.browniealice.net/post/fizzbuzz_with_range/thumnail_hu3e458b99f0d688fe678546d261747836_138251_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-54894cb8ca34f95f4f501f4326a8e2d0 {
+    background-image: url(https://blog.browniealice.net/post/stuck_on_lftp/CICD_hu138eaf9eb7f660c9ab77237473d4a6b3_61169_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-54894cb8ca34f95f4f501f4326a8e2d0 {
+    background-image: url(https://blog.browniealice.net/post/stuck_on_lftp/CICD_hu138eaf9eb7f660c9ab77237473d4a6b3_61169_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-165b0305df48f5a1adc1e8a54ff3fc61 {
+    background-image: url(https://blog.browniealice.net/post/kougyou/thumnail_hu2ba87f8ad06dd0fd42acbcf95852273a_43886_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-165b0305df48f5a1adc1e8a54ff3fc61 {
+    background-image: url(https://blog.browniealice.net/post/kougyou/thumnail_hu2ba87f8ad06dd0fd42acbcf95852273a_43886_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-bdc0d769ba3cf7586b002d858c3f0e73 {
+    background-image: url(https://blog.browniealice.net/post/i_do_not_know_structured_bindings/thumnail_hu4c6320c597f8778c3762adff6c7248b6_67961_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-bdc0d769ba3cf7586b002d858c3f0e73 {
+    background-image: url(https://blog.browniealice.net/post/i_do_not_know_structured_bindings/thumnail_hu4c6320c597f8778c3762adff6c7248b6_67961_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-8d570234c651d97e0d37180645e3aaa4 {
+    background-image: url(https://blog.browniealice.net/post/tuple_iterate/thumnail_hu996b8133ba9f1fdceb133a4e1fe7bd89_63075_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-8d570234c651d97e0d37180645e3aaa4 {
+    background-image: url(https://blog.browniealice.net/post/tuple_iterate/thumnail_hu996b8133ba9f1fdceb133a4e1fe7bd89_63075_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-4255232408838ede9a4cc98425641f37 {
+    background-image: url(https://blog.browniealice.net/post/arch_esp32_arduino_ide/esp32_hu7dd617e639f025a609fcacf6fc858c2a_159373_804x360_fill_q98_box_smart1.JPG);
+  }
+  .thumb-latest-4255232408838ede9a4cc98425641f37 {
+    background-image: url(https://blog.browniealice.net/post/arch_esp32_arduino_ide/esp32_hu7dd617e639f025a609fcacf6fc858c2a_159373_90x90_fill_q98_box_smart1.JPG);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-ee84d407087adef45b4a457045822071 {
+    background-image: url(https://blog.browniealice.net/post/ros-lunar_on_arch/rqt_graph_hu9b054ac16bf25b3d4f0c0a6a1230e7ef_45664_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-ee84d407087adef45b4a457045822071 {
+    background-image: url(https://blog.browniealice.net/post/ros-lunar_on_arch/rqt_graph_hu9b054ac16bf25b3d4f0c0a6a1230e7ef_45664_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+    
+  
+  .thumb-1f54bebe319e5f724f55a67ebe1033b3 {
+    background-image: url(https://blog.browniealice.net/post/latex_transpose/transpose.svg);
+  }
+  .thumb-latest-1f54bebe319e5f724f55a67ebe1033b3 {
+    background-image: url(https://blog.browniealice.net/post/latex_transpose/transpose.svg);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-46785c593059d032a0ded816c8a679fd {
+    background-image: url(https://blog.browniealice.net/post/rviz_invalid_quaternion/thumnail_hu1dff9e865c8fae6af8c3de324fabb27c_49135_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-46785c593059d032a0ded816c8a679fd {
+    background-image: url(https://blog.browniealice.net/post/rviz_invalid_quaternion/thumnail_hu1dff9e865c8fae6af8c3de324fabb27c_49135_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+    
+  
+  .thumb-fbf018af3bf684181cbf755445b23be8 {
+    background-image: url(https://blog.browniealice.net/post/how_to_use_urg/rosgraph.svg);
+  }
+  .thumb-latest-fbf018af3bf684181cbf755445b23be8 {
+    background-image: url(https://blog.browniealice.net/post/how_to_use_urg/rosgraph.svg);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-b038939432c095e43e5db31e849ccca1 {
+    background-image: url(https://blog.browniealice.net/post/mail_server/mail_hu5dd2e14e04bbd1e4be6f55dbb595987a_56454_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-b038939432c095e43e5db31e849ccca1 {
+    background-image: url(https://blog.browniealice.net/post/mail_server/mail_hu5dd2e14e04bbd1e4be6f55dbb595987a_56454_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-0a64983cba58730bb2af0409955358b8 {
+    background-image: url(https://blog.browniealice.net/post/build_server/https_hu8cfb40caf5c8840eb1bd46b049e69b5c_72506_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-0a64983cba58730bb2af0409955358b8 {
+    background-image: url(https://blog.browniealice.net/post/build_server/https_hu8cfb40caf5c8840eb1bd46b049e69b5c_72506_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-52c77f6c4439bee308b7b70571bc3dff {
+    background-image: url(https://blog.browniealice.net/post/yamanashi_camp/water_mill_hua389428c31d646d86f4f94fc089b7e84_208123_804x360_fill_q98_box_smart1.JPG);
+  }
+  .thumb-latest-52c77f6c4439bee308b7b70571bc3dff {
+    background-image: url(https://blog.browniealice.net/post/yamanashi_camp/water_mill_hua389428c31d646d86f4f94fc089b7e84_208123_90x90_fill_q98_box_smart1.JPG);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-b084b51a8d0fd36c5504f07790eabd31 {
+    background-image: url(https://blog.browniealice.net/post/2017aburobocon/miyabi_hua389428c31d646d86f4f94fc089b7e84_194858_804x360_fill_q98_box_smart1.JPG);
+  }
+  .thumb-latest-b084b51a8d0fd36c5504f07790eabd31 {
+    background-image: url(https://blog.browniealice.net/post/2017aburobocon/miyabi_hua389428c31d646d86f4f94fc089b7e84_194858_90x90_fill_q98_box_smart1.JPG);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-fccb9dc4c40081d07d288a46ef237345 {
+    background-image: url(https://blog.browniealice.net/post/visit-kanazawa-3day/hill_hua389428c31d646d86f4f94fc089b7e84_222407_804x360_fill_q98_box_smart1.JPG);
+  }
+  .thumb-latest-fccb9dc4c40081d07d288a46ef237345 {
+    background-image: url(https://blog.browniealice.net/post/visit-kanazawa-3day/hill_hua389428c31d646d86f4f94fc089b7e84_222407_90x90_fill_q98_box_smart1.JPG);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-63bdc4b8d51ddc3596e0c89dc2d5b8e2 {
+    background-image: url(https://blog.browniealice.net/post/visit-kanazawa-2day/hill_hua389428c31d646d86f4f94fc089b7e84_195030_804x360_fill_q98_box_smart1.JPG);
+  }
+  .thumb-latest-63bdc4b8d51ddc3596e0c89dc2d5b8e2 {
+    background-image: url(https://blog.browniealice.net/post/visit-kanazawa-2day/hill_hua389428c31d646d86f4f94fc089b7e84_195030_90x90_fill_q98_box_smart1.JPG);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-8f0cd2cc8169187a13b46487ebc3652f {
+    background-image: url(https://blog.browniealice.net/post/wiki_renewal/wiki_hu65805005c4084703c5bb40fc6b1dba54_35737_804x360_fill_box_smart1_2.png);
+  }
+  .thumb-latest-8f0cd2cc8169187a13b46487ebc3652f {
+    background-image: url(https://blog.browniealice.net/post/wiki_renewal/wiki_hu65805005c4084703c5bb40fc6b1dba54_35737_90x90_fill_box_smart1_2.png);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+      
+      
+    
+  
+  .thumb-38b38db844912c4807241c9313111e34 {
+    background-image: url(https://blog.browniealice.net/post/visit-kanazawa-1day/kanazawa_station_hua389428c31d646d86f4f94fc089b7e84_171031_804x360_fill_q98_box_smart1.JPG);
+  }
+  .thumb-latest-38b38db844912c4807241c9313111e34 {
+    background-image: url(https://blog.browniealice.net/post/visit-kanazawa-1day/kanazawa_station_hua389428c31d646d86f4f94fc089b7e84_171031_90x90_fill_q98_box_smart1.JPG);
+  }
+
+
+
+  
+  
+  
+    
+      
+      
+    
+  
+  .thumb-e6eeba49f86123b7278d1bce5c53b830 {
+    background-image: url(https://blog.browniealice.net/post/disqus_introduce/icon.svg);
+  }
+  .thumb-latest-e6eeba49f86123b7278d1bce5c53b830 {
+    background-image: url(https://blog.browniealice.net/post/disqus_introduce/icon.svg);
+  }
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+  </head>
+  <body>
+    <header class="l-header">
+      <div class="l-container">
+        <div class="logo">
+          <a href="https://blog.browniealice.net/">Alice in the Machine - Blog</a>
+        </div>
+        
+
+      </div>
+    </header>
+
+    <main>
+      <div class="l-container">
+        
+<div class="mrow">
+  <div class="mcol c8">
+
+    <article class="sn">
+
+  <div class="thumb thumb-654a09a3f6a5b35f1b7e0a3ac8284c61"></div>
+
+  <header class="article-header">
+    <h1 class="title">Arch Linux上でZoom用の仮想カメラ/マイクを作る</h1>
+
+    <ul class="facts">
+      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2020-08-26T15:39:22JST">2020-08-26</time></li>
+      
+      <li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="https://blog.browniealice.net/post/">POST</a></li>
+      
+    </ul>
+
+    <aside class="share">
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f&title=Arch%20Linux%e4%b8%8a%e3%81%a7Zoom%e7%94%a8%e3%81%ae%e4%bb%ae%e6%83%b3%e3%82%ab%e3%83%a1%e3%83%a9%2f%e3%83%9e%e3%82%a4%e3%82%af%e3%82%92%e4%bd%9c%e3%82%8b" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f&text=Arch%20Linux%e4%b8%8a%e3%81%a7Zoom%e7%94%a8%e3%81%ae%e4%bb%ae%e6%83%b3%e3%82%ab%e3%83%a1%e3%83%a9%2f%e3%83%9e%e3%82%a4%e3%82%af%e3%82%92%e4%bd%9c%e3%82%8b&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f&t=Arch%20Linux%e4%b8%8a%e3%81%a7Zoom%e7%94%a8%e3%81%ae%e4%bb%ae%e6%83%b3%e3%82%ab%e3%83%a1%e3%83%a9%2f%e3%83%9e%e3%82%a4%e3%82%af%e3%82%92%e4%bd%9c%e3%82%8b" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f&title=Arch%20Linux%e4%b8%8a%e3%81%a7Zoom%e7%94%a8%e3%81%ae%e4%bb%ae%e6%83%b3%e3%82%ab%e3%83%a1%e3%83%a9%2f%e3%83%9e%e3%82%a4%e3%82%af%e3%82%92%e4%bd%9c%e3%82%8b" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+</aside>
+
+  </header>
+
+  
+
+  <div class="article-body"><p>新型コロナウイルスの影響で卒論発表が Zoom で開催されることとなり, 従来研究室の学生が行っていたタイムキーパーも Zoom 上で行うことになりました.<br>
+ブラウザ上に<a href="https://maruta.github.io/timekeeper/">Time Keeper</a>を表示させ, その画面と音を仮想カメラ/マイクとして Zoom 上に流し込む形式にしました.
+行ったことは<a href="https://getkey.eu/blog/55106b9f/a-virtual-webcam">A virtual webcam - Getkey</a>の内容とほぼ同じですが, 備忘録として書き留めておきます.</p>
+<h2 id="必要ソフトのインストールと起動">必要ソフトのインストールと起動</h2>
+<p>まず以下のソフトをインストールします.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo pacman -S ffmpeg pavucontrol linux-headers v4l2loopback-dkms
+</code></pre></div><p>次に仮想カメラと仮想マイクを起動します.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<pre><code>sudo modprobe v4l2loopback
+sudo modprobe snd-aloop
+</code></pre><h2 id="仮想カメラの起動">仮想カメラの起動</h2>
+<p>まず <code>v4l2-ctl --list-devices</code> で起動した仮想カメラを確認します.
+私の環境では以下のようになりました.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Dummy video device (0x0000) (platform:v4l2loopback-000):
+	/dev/video2
+
+HD Pro Webcam C920 (usb-0000:0b:00.1-5):
+	/dev/video0
+	/dev/video1
+</code></pre></div><p><code>/dev/video2</code> が仮想カメラのデバイスとわかったので, ffmpeg でスクリーンをキャプチャして流し込みます.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -f x11grab -s 1920x1080 -i $DISPLAY+0,0 -vf format<span style="color:#f92672">=</span>pix_fmts<span style="color:#f92672">=</span>yuv420p -f v4l2 /dev/video2
+</code></pre></div><h2 id="仮想マイクの起動">仮想マイクの起動</h2>
+<p>最初にブラウザの音声を「内部オーディオ アナログステレオ」に出力させます.<br>
+<code>pavucontrol</code> を起動し再生タブを開きます.
+一時的にブラウザから音を鳴らし, 出力先を「内部オーディオ アナログステレオ」に変更します.</p>
+<figure>
+  <img src="https://blog.browniealice.net/post/zoom_virtual_cam_and_mic_on_arch/pavucontrol_hua9d79088aa21af841c615417437602a9_42216_768x0_resize_box_2.png" alt="オーディオ設定">
+  <figcaption>
+    オーディオ設定
+  </figcaption>
+</figure>
+<p>次に仮想的なスピーカへの出力を仮想的なマイクへの入力にループさせます.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>
+<code>cat /proc/asound/cards</code> でサウンドカードを確認します.
+私の環境では以下のようになりました.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt"> 0 [NVidia         ]: HDA-Intel - HDA NVidia
+                      HDA NVidia at 0xf7080000 irq 109
+ 1 [Generic        ]: HDA-Intel - HD-Audio Generic
+                      HD-Audio Generic at 0xf7b00000 irq 111
+ 2 [C920           ]: USB-Audio - HD Pro Webcam C920
+                      HD Pro Webcam C920 at usb-0000:0b:00.1-5, high speed
+ 3 [S5             ]: USB-Audio - SteelSeries Arctis 5
+                      SteelSeries SteelSeries Arctis 5 at usb-0000:0b:00.3-4, full speed
+ 4 [Loopback       ]: Loopback - Loopback
+                      Loopback 1
+</code></pre></div><p>4 番が仮想マイクになっているので, ffmpeg でループさせます.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">ffmpeg -f alsa -i hw:4,1 -f wav -f alsa hw:4,1
+</code></pre></div><h2 id="zoom-設定">Zoom 設定</h2>
+<p>あとは Zoom 側でカメラとして「Dummy video device」を選択し, マイクとして「内部オーディオ アナログステレオ」を選択すれば完了です.</p>
+<figure>
+  <img src="https://blog.browniealice.net/post/zoom_virtual_cam_and_mic_on_arch/zoom_hu45d9c4337186f3291d1c87476dbcc271_82402_768x0_resize_box_2.png" alt="タイムキーパー">
+  <figcaption>
+    タイムキーパー
+  </figcaption>
+</figure>
+<h2 id="その他のビデオ会議ソフト">その他のビデオ会議ソフト</h2>
+<p>Zoom 以外のソフトの場合, ffmpeg を用いずに pulse audio の機能で仮想マイクを作ることができます.<br>
+<code>pavucontrol</code> の録音タブから入力デバイスを「Monitor of 内部オーディオ アナログステレオ」にすれば ffmpeg でループさせる必要はなくなります.<br>
+Zoom の場合は上述の操作は反映されませんが, Chromium 上で動く Google Meet の場合はこの操作で問題ありません.<br>
+一方 Chromium は v4l2loopback に追加のパラメータを渡す必要があるようなので注意が必要です. <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://getkey.eu/blog/55106b9f/a-virtual-webcam">A virtual webcam - Getkey</a></li>
+<li><a href="https://blog.kotet.jp/2020/04/v4l2loopback/">#linux v4l2loopback で画面キャプチャをカメラ入力にする - Kotet&rsquo;s Personal Blog</a></li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>このやり方では再起動するたびに <code>modprobe</code> で起動する必要が有ります. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>適切に設定すれば ffmpeg を使わずにループできそうな気がしますが, 私にはわかりませんでした. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://github.com/umlaeute/v4l2loopback/issues/78">Cannot see the v4l2loopback using google-chrome or chromium · Issue #78 · umlaeute/v4l2loopback</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+
+  <footer class="article-footer">
+
+    <aside class="share">
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f&title=Arch%20Linux%e4%b8%8a%e3%81%a7Zoom%e7%94%a8%e3%81%ae%e4%bb%ae%e6%83%b3%e3%82%ab%e3%83%a1%e3%83%a9%2f%e3%83%9e%e3%82%a4%e3%82%af%e3%82%92%e4%bd%9c%e3%82%8b" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f&text=Arch%20Linux%e4%b8%8a%e3%81%a7Zoom%e7%94%a8%e3%81%ae%e4%bb%ae%e6%83%b3%e3%82%ab%e3%83%a1%e3%83%a9%2f%e3%83%9e%e3%82%a4%e3%82%af%e3%82%92%e4%bd%9c%e3%82%8b&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f&t=Arch%20Linux%e4%b8%8a%e3%81%a7Zoom%e7%94%a8%e3%81%ae%e4%bb%ae%e6%83%b3%e3%82%ab%e3%83%a1%e3%83%a9%2f%e3%83%9e%e3%82%a4%e3%82%af%e3%82%92%e4%bd%9c%e3%82%8b" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f&title=Arch%20Linux%e4%b8%8a%e3%81%a7Zoom%e7%94%a8%e3%81%ae%e4%bb%ae%e6%83%b3%e3%82%ab%e3%83%a1%e3%83%a9%2f%e3%83%9e%e3%82%a4%e3%82%af%e3%82%92%e4%bd%9c%e3%82%8b" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fblog.browniealice.net%2fpost%2fzoom_virtual_cam_and_mic_on_arch%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+</aside>
+
+
+    <section class="footer">
+      <div>
+        <nav class="crumb">
+          <ol>
+            <li><a href="https://blog.browniealice.net/"><i class="fas fa-home" aria-hidden="true"></i>TOP</a></li>
+            
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.browniealice.net/post/" itemprop="url"><span itemprop="title">POST</span></a></li>
+            
+            <li class="active">Arch Linux上でZoom用の仮想カメラ/マイクを作る</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    
+    
+    
+    <section class="footer">
+      <header>
+        <a href="https://blog.browniealice.net/categories/">CATEGORIES</a>
+      </header>
+      <div>
+        <ul class="terms">
+          
+          <li><a href="https://blog.browniealice.net/categories/technote/">TechNote</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    <div class="adj">
+      <div class="mrow">
+        
+        <div class="mcol c6">
+          <header>Previous Article</header>
+          <article class="lism">
+  <a href="https://blog.browniealice.net/post/fizzbuzz_with_range/">
+    <div class="thumb thumb-latest-ae299337fd7017519ab102eac1d8f264"></div>
+
+    <div class="inner">
+      <div class="title">C&#43;&#43;のRangeでFizzBuzzしてみた</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="5007-03-05T01:10:01JST">2020-03-05</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "alice-in-the-machine-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+  <div class="mcol c4">
+    <aside class="l-sidebar">
+
+  <div class="sections sidebar">
+    
+<section class="sidebar">
+  <header>AUTHOR</header>
+  <div>
+    <div class="author">
+      
+      <div class="author-thumb" style="background-image: url(https://blog.browniealice.net/images/author.png);"></div>
+      
+      <div class="author-name">BrownieAlice</div>
+      <ul class="author-facts">
+        
+        
+        <li><a href="https://github.com/BrownieAlice" rel="nofollow" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="author-description"><div align="center">
+工業大学に通う大学院生<br>
+<a href="https://blog.browniealice.net">Blog</a> /
+<a href="https://wiki.browniealice.net">wiki</a> /
+<a href="https://github.com/BrownieAlice/blog.git">Repository</a>
+</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sidebar">
+  <header>LATESTS</header>
+  <div>
+    <div class="articles sm">
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/zoom_virtual_cam_and_mic_on_arch/">
+    <div class="thumb thumb-latest-654a09a3f6a5b35f1b7e0a3ac8284c61"></div>
+
+    <div class="inner">
+      <div class="title">Arch Linux上でZoom用の仮想カメラ/マイクを作る</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="26007-08-26T15:39:22JST">2020-08-26</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/fizzbuzz_with_range/">
+    <div class="thumb thumb-latest-ae299337fd7017519ab102eac1d8f264"></div>
+
+    <div class="inner">
+      <div class="title">C&#43;&#43;のRangeでFizzBuzzしてみた</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="5007-03-05T01:10:01JST">2020-03-05</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/stuck_on_lftp/">
+    <div class="thumb thumb-latest-54894cb8ca34f95f4f501f4326a8e2d0"></div>
+
+    <div class="inner">
+      <div class="title">LFTPでハマった話</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="7007-01-07T00:29:58JST">2020-01-07</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/internship2019winter/">
+    <div class="thumb thumb-latest-ea9cca8939f6c1d0f690ed518c5ef3c3"></div>
+
+    <div class="inner">
+      <div class="title">大企業の技術系インターンシップに参加した</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="31007-03-31T21:28:47JST">2019-03-31</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/kougyou/">
+    <div class="thumb thumb-latest-165b0305df48f5a1adc1e8a54ff3fc61"></div>
+
+    <div class="inner">
+      <div class="title">工業の2文字の真実</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="31007-03-31T20:32:56JST">2019-03-31</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/i_do_not_know_structured_bindings/">
+    <div class="thumb thumb-latest-bdc0d769ba3cf7586b002d858c3f0e73"></div>
+
+    <div class="inner">
+      <div class="title">構造化束縛分かってなかった</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="4007-01-04T09:46:46JST">2019-01-04</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/tuple_iterate/">
+    <div class="thumb thumb-latest-8d570234c651d97e0d37180645e3aaa4"></div>
+
+    <div class="inner">
+      <div class="title">std::tupleの全要素の走査</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="29007-12-29T04:24:53JST">2018-12-29</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/arch_esp32_arduino_ide/">
+    <div class="thumb thumb-latest-4255232408838ede9a4cc98425641f37"></div>
+
+    <div class="inner">
+      <div class="title">Arch LinuxでESP32の環境を構築(Arduino IDE)</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2007-09-02T03:51:18JST">2018-09-02</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/ros-lunar_on_arch/">
+    <div class="thumb thumb-latest-ee84d407087adef45b4a457045822071"></div>
+
+    <div class="inner">
+      <div class="title">Arch LinuxでROS Lunarを使う</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="30007-04-30T21:48:13JST">2018-04-30</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://blog.browniealice.net/post/latex_transpose/">
+    <div class="thumb thumb-latest-1f54bebe319e5f724f55a67ebe1033b3"></div>
+
+    <div class="inner">
+      <div class="title">LaTeXでの転置行列の表記</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-01-14T00:50:09JST">2018-01-14</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POST</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+    </div>
+  </div>
+</section>
+
+    
+<section class="sidebar">
+  <header>CATEGORIES</header>
+  <div>
+    <ul class="terms">
+      <li><a href="https://blog.browniealice.net/categories/technote">technote <span class="count">(11)</span></a></li><li><a href="https://blog.browniealice.net/categories/diary">diary <span class="count">(9)</span></a></li><li><a href="https://blog.browniealice.net/categories/travel">travel <span class="count">(4)</span></a></li>
+    </ul>
+  </div>
+</section>
+
+
+
+    
+<section class="sidebar">
+  <header>TAGS</header>
+  <div>
+    <ul class="terms">
+      <li><a href="https://blog.browniealice.net/tags/c&#43;&#43;">c&#43;&#43; <span class="count">(3)</span></a></li><li><a href="https://blog.browniealice.net/tags/hugo">hugo <span class="count">(3)</span></a></li><li><a href="https://blog.browniealice.net/tags/pilgrimage">pilgrimage <span class="count">(3)</span></a></li><li><a href="https://blog.browniealice.net/tags/ros">ros <span class="count">(3)</span></a></li><li><a href="https://blog.browniealice.net/tags/server">server <span class="count">(3)</span></a></li><li><a href="https://blog.browniealice.net/tags/robocon">robocon <span class="count">(2)</span></a></li><li><a href="https://blog.browniealice.net/tags/esp32">esp32 <span class="count">(1)</span></a></li><li><a href="https://blog.browniealice.net/tags/internship">internship <span class="count">(1)</span></a></li><li><a href="https://blog.browniealice.net/tags/labo">labo <span class="count">(1)</span></a></li><li><a href="https://blog.browniealice.net/tags/latex">latex <span class="count">(1)</span></a></li>
+    </ul>
+  </div>
+</section>
+
+
+
+    
+<section class="sidebar">
+  <header>SERIES</header>
+  <div>
+    <ul class="terms">
+      <li><a href="https://blog.browniealice.net/series/%E9%87%91%E6%B2%A2%E8%81%96%E5%9C%B0%E5%B7%A1%E7%A4%BC">金沢聖地巡礼 <span class="count">(3)</span></a></li>
+    </ul>
+  </div>
+</section>
+
+
+
+  </div>
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-container">
+        <p>Copyright &copy; 2017-2020, BrownieAlice.<br>
+<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>
+<img alt='クリエイティブ・コモンズ・ライセンス' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/4.0/80x15.png' />
+</a><br>
+このサイトのテキストは原則として
+<a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'>クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス</a>
+の下に提供されています.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

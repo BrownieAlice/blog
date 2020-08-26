@@ -16,7 +16,7 @@ Copyright &copy; 2017-2020, BrownieAlice.<br>
 の下に提供されています."""
 
 [params]
-description = "エンジニアを目指したいへっぽこ学生の技術系ブログ."
+description = ""
 dateformat = "2006-01-02"
 
 [params.author]
@@ -24,8 +24,7 @@ thumbnail = "images/author.png"
 name = "BrownieAlice"
 description = """
 <div align="center">
-工業大学に通う大学院生. <br>
-ロボコンに参加したことがあったり? <br>
+工業大学に通う大学院生<br>
 <a href="https://blog.browniealice.net">Blog</a> /
 <a href="https://wiki.browniealice.net">wiki</a> /
 <a href="https://github.com/BrownieAlice/blog.git">Repository</a>
