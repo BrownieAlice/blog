@@ -13,10 +13,15 @@
 このサイトのテキストは原則として
 &lt;a rel=&#39;license&#39; href=&#39;http://creativecommons.org/licenses/by-sa/4.0/&#39;&gt;クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス&lt;/a&gt;
 の下に提供されています.</copyright>
-    <lastBuildDate>Wed, 26 Aug 2020 15:39:22 +0900</lastBuildDate>
-    
-	<atom:link href="https://blog.browniealice.net/categories/technote/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 13 Oct 2020 23:20:40 +0900</lastBuildDate><atom:link href="https://blog.browniealice.net/categories/technote/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch LinuxのCode-OSSの拡張機能の検索先を変更する</title>
+      <link>https://blog.browniealice.net/post/code-oss_marketplace_issue_on_arch/</link>
+      <pubDate>Tue, 13 Oct 2020 23:20:40 +0900</pubDate>
+      
+      <guid>https://blog.browniealice.net/post/code-oss_marketplace_issue_on_arch/</guid>
+      <description>Arch Linux の公式リポジトリにある VSCode の OSS 版のCode-OSSの拡張機能の検索先が変更されていました. 従来はVisual Studio Marketplaceでした</description>
+    </item>
     
     <item>
       <title>Arch Linux上でZoom用の仮想カメラ/マイクを作る</title>
